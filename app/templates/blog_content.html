@@ -1,0 +1,57 @@
+<!-- to show the blog content  -->
+
+<div class="blog_page" ng-controller="blogsController">
+    <div class="blog_main_image">
+        <img src="../images/blogs_content.jpg" alt="Blogs image" />
+    </div>
+    <div class="blogs_text">
+        <div class="blogs_main_container">
+            <div class="blog_text_image">
+                <img src="../images/blog_text_image.jpg" alt="Blogs text image" />
+            </div>
+            <div class="blog_content">
+                <h2>Google Fuchsia: A new Operating System</h2>
+                <p>Fuchsia is lightweight operating system which is being developed by Google for making cross platform apps. The OS will not be based on Linux kernel and it is completely independent from android. Its kernel will be designed for only specific
+                    purpose and it is only possible by building the operating system on micro-kernel so Google has designed its own micro-kernel named xyz</p>
+                <img src="../images/blogs_text.jpg" alt="" />
+                <p>Like embedded systems, mobile applications do not need to rely on complete OS for specific tasks to perform. Fuchsia will be considered as real-time operating system because it will be having the unified features of android OS and chrome
+                    OS.
+                </p>
+                <h2>Why is it so lightweight?</h2>
+                <p>Google has already developed two operating systems, Android and Chrome OS, but both are based on Linux Kernel which follows modular monolithic approach. Linux kernel bears lots of issues like system is assembled from different component
+                    and these components work together reliably but processing becomes slow.</p>
+                <p>In <span class='boldText'>monolithic</span> type of architecture, all the basic services of operating system like management of memory, management of processes and handling the interrupts etc are packaged into a single module within the
+                    kernel space. This type of architecture leads to some serious drawbacks like huge kernel size, poor maintenance which means when there is a need to add some extra feature or fixing of bugs, the whole kernel needs to be recompiled again.</p>
+                <p>Fuchsia OS utilizes the <span class='boldText'>Magenta</span> micro-kernel to control the most basic hardware functions by inter-process communication. Micro-kernels are better than monolithic kernels in terms of performance and process
+                    management. Magenta is built for modern computers, having fast processors, reduced amount of RAM and arbitrary peripherals doing open ended communication.<span class='boldText'>[3]</span></p>
+                <h2>The first look of Fuchsia smartphones</h2>
+                <p>Fuchsia interface and apps are written with <span class='boldText'>Google's Flutter SDK</span>. Flutter is mobile SDK which is used for building iOS and android applications from a single code base. It is like Google's widget framework
+                    for apps that is written in Dart which gives better performance from those most of the android applications which are written with java. Flutter's another design target is to provide high performance app which can run ideally 120 frames
+                    per second <span class='boldText'>[2]</span>.</p><img src='../images/fuchsia_os_first_ui.png' class='centerdImages' alt='Fuchsia Operating System User Interface' />
+                <p>The User Interface of Fuchsia is called <span class='boldText'>Armadillo</span>. Armadillo interface is like series of cards on wide home screen which represent apps and fuchsia smart phones will be having only single home button which
+                    will work like window manager. Back and Recent app buttons will missing in these smart phones.<span class='boldText'>[5]</span></p>
+                <p>In the center there will be user's profile picture which can be tapped on and it will bring a menu that is like Android Quick Settings. The top row of icon shows battery percentage, network and cellular information. Below that, there will
+                    be slider consisting volume, brightness control and icons for airplane mode, do not disturb and orientation control.<span class='boldText'>[5]</span></p>
+                <p>Above the profile section, there is a bunch of cards which represents the set of apps that work together for the users to achieve a goal. Tapping on any card will load its full screen interface and the more interesting thing is split screen
+                    mode. In split screen mode, any card can be dragged into another card, can be placed anywhere on the screen horizontally as well as vertically by long pressing or user can have tab bar on top for all the applications that are dragged
+                    into one. By tapping on any tab, user can have full screen interface of particular selected application and again by clicking on home white circle button, home screen will appear with all the cards interfaces and that combined card
+                    interface. Swapping down from bottom list of suggestions card will appear and the bottom panel of screen consists Google search bar. Tapping on it will bring up a new customized keyboard which has a new dark theme similar to G-board.
+                    But it lacks lots of features like long pressing for symbols or setting do not work.<span class='boldText'>[5]</span></p>
+                <h2>Will Fuchsia Smart Phones Replace Android phones?</h2>
+                <p>Google’s Android platform has become so popular that it is difficult to imagine the future without it. However Android's Linux kernel is deteriorated with lots of issues, but it has covered all the market and people have become so used
+                    to it that they will find difficulty to adapt new OS in their smart phones.</p>
+                <p>Security is the biggest issue for all the operating systems including Linux. While Linux has good reputation than windows but from security point of view no operating system is perfect. Hundreds of devices cause fragmentation in android
+                    because these devices use twisted version of android. Google lends its OEM and carriers and permits other devices to modify accordingly. It too causes defragmentation in the android OS as the modifications cannot be promptly administered.
+                    <span class='boldText'>[4]</span>
+                </p>
+                <p>Another problem is update problem. Google releases new android updates annually and some tinkered devices don’t support updates so users with older version of android are not able to use new customized features of android updates.
+                    <span class='boldText'>[4]</span>
+                </p>
+                <p>These issues are perfectly resolved by a new OS as the resolutions provided by them are not the part of the expensive patent licenses. Fuchsia OS will be having a new updated customized widget framework. It won't need regular updates and
+                    it would be safer built and optimized for today. Google will solve all fragmentation and update problems in Fuchsia and it would gainfully work in different devices.</p>
+                <p>References :-</p>
+            </div>
+        </div>
+        <div class="blogs_comment"></div>
+    </div>
+</div>

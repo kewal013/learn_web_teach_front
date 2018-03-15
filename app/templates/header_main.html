@@ -1,0 +1,50 @@
+<!--header for the home page  -->
+
+<div class="header_home" ng-controller="navController">
+    <div class="top_header">
+        <div class="signup_home displayFlexAndCenter">Subscribe</div>
+        <div class="right_floated_header_items">
+            <div class="main_login displayFlexAndCenter">Login</div>
+            <div class="main_cart">
+                <div class="my_cart displayFlexAndCenter">My Blog</div>
+                <div class="cart_number displayFlexAndCenter">0</div>
+            </div>
+        </div>
+    </div>
+
+    <!--div to show menus  -->
+    <div class="header_menu">
+        <div class="main_page_logo">
+            <img src="../images/logo.png" alt="Blogs" />
+            <span>learnWebTech</span>
+        </div>
+        <div class="main_page_menu">
+            <ul class="main_page_menu_list displayFlexAndCenter">
+                <li>
+                    <a href="javascript:void(0)" ng-click="gotoState('home')">Blogs</a>
+                    <!-- <a ui-sref="home" ng-click="count('home')">Home</a> -->
+                </li>
+
+                <li>
+                    <a href="javascript:void(0)" ng-click="gotoState('home')">Be a Blogger</a>
+                    <!-- <a ui-sref="home" ng-click="count('home')">Home</a> -->
+                </li>
+                <li>
+                    <a href="javascript:void(0)" ng-click="gotoState('about')">Know Us</a>
+                    <!-- <a ui-sref="about">About</a> -->
+
+                </li>
+                <li>
+                    <a href="javascript:void(0)" ng-click="gotoState(contact_me)">Contact Me</a>
+                    <!-- <a ui-sref="home">Contact Me</a> -->
+
+                </li>
+                <li>
+                    <a href="javascript:void(0)">rajneeshm198@gmail.com</a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--header_menu div ends  -->
+</div>
