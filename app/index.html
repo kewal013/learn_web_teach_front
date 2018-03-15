@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html ng-app="ecom">
+
+<head>
+    <title>Get your issues solved.</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Technology Blogs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Blog, Technology, Angular" />
+
+    <!--include twitter and facebook open graph later-->
+
+    <!--for css-->
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom/ecom.css" />
+</head>
+
+<body ng-controller="navController" autoscroll='false'>
+    <!--header starts for the login page-->
+    <div class="header_main" ng-include="'templates/header_main.html'" ng-if="showMainHeader"></div>
+    <!--header ends- of the login page-->
+
+    <!--content section starts-->
+
+    <div ui-view class='section_content_home'></div>
+    <div class="clearfix"></div>
+    <div class="common_footer">
+        <!-- for the contact us section -->
+        <div class="subscribe_us">
+            <h3>Subscribe For the Weekly Updates</h3>
+            <div class="heading_border"></div>
+
+            <div class="subscribe_form">
+                <form>
+                    <input type="email" placeholder="Your Email Address goes here" />
+                    <div class="form_submit">
+                        <input type="submit" value="Subscribe" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- subscribe us page ends -->
+
+        <!-- contact us section starts -->
+        <div class="contact_us">
+            <div class="get_in_touch">
+                <h4>Get In Touch</h4>
+                <p>Have a question for me.</p>
+                <p>Feel Free to ask. Send me your question</p>
+                <div class="message_us container-fluid">
+                    <div class="row" style="height:100%">
+                        <div class="message_form col-md-8">
+                            <div class="form_heading">
+                                <h5>Send us Message</h5>
+                                <img src="../images/email.png" class="email_image" alt="Message" width="50px" height="50px" />
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <form class="message_contact_us">
+                                <div class="row">
+                                    <div class="user_name col-md-6">
+                                        <label for="userName">Your Name</label>
+                                        <input type="text" id="userName" />
+                                    </div>
+                                    <div class="user_email col-md-6">
+                                        <label for="userEmail">Email Address</label>
+                                        <input type="email" id="userEmail" />
+                                    </div>
+                                    <div class="user_subject col-md-6">
+                                        <label for="msgSubject">Subject</label>
+                                        <input type="text" id="msgSubject" />
+                                    </div>
+                                    <div class="user_subject col-md-6">
+                                        <label for="userCountry">Country</label>
+                                        <input type="text" id="userCountry" />
+                                    </div>
+                                    <div class="user_message col-md-12">
+                                        <label for="userMsg">Message</label>
+                                        <textarea name="message" id="userMsg" rows="1"></textarea>
+                                    </div>
+                                </div>
+                                <div class="submit">
+                                    <img src="../images/send_email.png" alt="Send Email" />
+                                </div>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                        <div class="contact_information col-md-4">
+                            <div class="who_am_i"></div>
+                            <p>Rajneesh Mishra</p>
+                            <p>Software Engineer</p>
+                            <p>Newgen Software Technologies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_content container">
+                <div class="row">
+                    <div class="footer_logo col-md-4">
+                        <img src="../images/logo.png" alt="Blogs" />
+                        <span>learnWebTech</span>
+                        <p>Using this blog I will share the How I solved a particular issue while coding.Learn the technologies from the community itself. Get the solutions of your problem.</p>
+                    </div>
+                    <div class="footer_links col-md-8">
+                        <ul class="list">
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li>Login</li>
+                        </ul>
+                        <div class="footer_social_icons">
+                            <p>Email: rajneeshm198@gmail.com</p>
+                            <span><img src="../images/fb_icon.png" /></span>
+                            <span><img src="../images/tw_icon.png" /></span>
+                            <span><img src="../images/ln_icon.png" /></span>
+                            <span><img src="../images/gplus_icon.png" /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact us seciton ends -->
+    <!--content section ends-->
+</body>
+<!--jquery liberary file version 3.2.1-->
+<script type="text/javascript" src="scripts/lib/jquery_min.js"></script>
+<!--angular liberary fie  -->
+<script type="text/javascript" src="scripts/lib/angular_min.js"></script>
+<!--angular ui router module-->
+<script type="text/javascript" src="scripts/lib/angular-ui-router.min.js"></script>
+<!--script file of bootstrap  -->
+<script type="text/javascript" src="scripts/lib/bootstrap_min.js"></script>
+<!--app.js  -->
+<script type="text/javascript" src="app.js"></script>
+<!-- nav controller -->
+<script type="text/javascript" src="scripts/controllers/navController.js"></script>
+<!--home controller  -->
+<script type="text/javascript" src="scripts/controllers/homeController.js"></script>
+<!-- blogs controller -->
+<script type="text/javascript" src="scripts/controllers/blogsController.js"></script>
+
+</html>
