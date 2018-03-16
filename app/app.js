@@ -13,9 +13,15 @@ ecom.config(function($stateProvider, $urlRouterProvider) {
         controller: 'homeController'
     })
 
-    .state("about", {
-        url: '/about-me',
-        templateUrl: 'templates/about_me.html'
+    .state("blogs", {
+        url: '/blogs',
+        templateUrl: 'templates/blogs.html',
+        controller: 'blogsController'
+    })
+
+    .state("contact-us", {
+        url: '/contact-us',
+        templateUrl: 'templates/contact_us.html'
     })
 
     .state("blog", {
