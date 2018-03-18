@@ -916,13 +916,68 @@ form.message_contact_us .row {
 }
 
 .circled_content span {
-    display: inline-block;
+    display: block;
     width: 164px;
-    padding: 24px;
-    background: #f99709;
+    padding: 36px;
+    height: 164px;
+    background: #000000;
+    box-shadow: 0px 0px 6px 4px #e2e2e280;
     font-size: 15px;
     border-radius: 50%;
     font-weight: 600;
+    margin: auto;
+    color: #ffffff;
+}
+
+span.hanging_number {
+    width: 30px;
+    height: 30px;
+    padding: 4px 0 0 1px;
+    display: block;
+}
+
+.hanging_wire {
+    width: 2px;
+    height: 149px;
+    background: #ff9e0e;
+    margin: auto;
+}
+
+.hanging_content {
+    width: 80%;
+    margin: auto;
+}
+
+@-webkit-keyframes swinging {
+    0% {
+        -webkit-transform: rotate(10deg);
+    }
+    50% {
+        -webkit-transform: rotate(-5deg)
+    }
+    100% {
+        -webkit-transform: rotate(10deg);
+    }
+}
+
+@keyframes swinging {
+    0% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-5deg)
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+.hanging_wire,
+.circled_content span {
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+    animation: swinging 3.5s ease-in-out forwards infinite;
 }
 
 
