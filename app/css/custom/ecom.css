@@ -900,5 +900,30 @@ form.message_contact_us .row {
     font-weight: 600;
 }
 
+.learnwebtech_moto p {
+    font-size: 30px;
+}
+
+.learnwebtech_moto {
+    width: 70%;
+    margin: 35px auto;
+}
+
+.circled_content {
+    display: inline-block;
+    width: auto;
+    padding: 30px;
+}
+
+.circled_content span {
+    display: inline-block;
+    width: 164px;
+    padding: 24px;
+    background: #f99709;
+    font-size: 15px;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
 
 /* css for home page ends */
