@@ -2,9 +2,61 @@
 
 <div class="header_home" ng-controller="navController">
     <div class="top_header">
-        <div class="signup_home displayFlexAndCenter">Subscribe</div>
+        <div class="signup_home displayFlexAndCenter" data-toggle="modal" data-target="#subscribe">Subscribe</div>
+        <!-- Modal -->
+        <div class="modal fade" id="subscribe" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- for the contact us section -->
+                        <div class="subscribe_us">
+                            <h3>Subscribe For the Weekly Updates</h3>
+                            <div class="heading_border"></div>
+
+                            <div class="subscribe_form">
+                                <form>
+                                    <input type="email" placeholder="Your Email Address goes here" />
+                                    <div class="form_submit">
+                                        <input type="submit" value="Subscribe" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- subscribe us page ends -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- modal for login sign-up ends -->
         <div class="right_floated_header_items">
-            <div class="main_login displayFlexAndCenter">Login</div>
+            <div class="main_login displayFlexAndCenter" data-toggle="modal" data-target="#myModal">Login/ Sign Up</div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Some text in the modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- modal for login sign-up ends -->
             <div class="main_cart">
                 <div class="my_cart displayFlexAndCenter">My Blog</div>
                 <div class="cart_number displayFlexAndCenter">0</div>

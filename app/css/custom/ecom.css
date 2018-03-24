@@ -534,14 +534,16 @@ span.published_date {
 }
 
 .why_learnwebTech,
-.subscribe_us {
+.subscribe_us,
+.latest_stories {
     text-align: center;
     color: #000;
     padding: 50PX;
 }
 
 .why_learnwebTech h3,
-.subscribe_us h3 {
+.subscribe_us h3,
+.latest_stories h3 {
     font-size: 34px;
     font-weight: 600;
 }
@@ -909,76 +911,79 @@ form.message_contact_us .row {
     margin: 35px auto;
 }
 
-.circled_content {
-    display: inline-block;
-    width: auto;
-    padding: 30px;
+.latest_stories_content.padding50px {
+    margin: 50px 0;
 }
 
-.circled_content span {
-    display: block;
-    width: 164px;
-    padding: 36px;
-    height: 164px;
-    background: #000000;
-    box-shadow: 0px 0px 6px 4px #e2e2e280;
-    font-size: 15px;
-    border-radius: 50%;
+
+/* .web_technology_stories p {
+    font-size: 17px;
+    padding: 10px;
+    color: #103f6d;
     font-weight: 600;
-    margin: auto;
-    color: #ffffff;
+} */
+
+.web_technology_stories:hover {
+    background: #00988a;
+    border: none;
+    color: #fff;
+    cursor: pointer;
 }
 
-span.hanging_number {
-    width: 30px;
-    height: 30px;
-    padding: 4px 0 0 1px;
-    display: block;
+.web_technology_stories {
+    height: 200px;
+    margin: 30px 0px 10px 0;
+    border: 2px solid #00988a;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    font-size: 17px;
+    padding: 20px 0;
+    color: #103f6d;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
 }
 
-.hanging_wire {
-    width: 2px;
-    height: 149px;
-    background: #ff9e0e;
-    margin: auto;
-}
-
-.hanging_content {
-    width: 80%;
-    margin: auto;
-}
-
-@-webkit-keyframes swinging {
-    0% {
-        -webkit-transform: rotate(10deg);
-    }
-    50% {
-        -webkit-transform: rotate(-5deg)
-    }
-    100% {
-        -webkit-transform: rotate(10deg);
-    }
-}
-
-@keyframes swinging {
-    0% {
-        transform: rotate(10deg);
-    }
-    50% {
-        transform: rotate(-5deg)
-    }
-    100% {
-        transform: rotate(10deg);
-    }
-}
-
-.hanging_wire,
-.circled_content span {
-    -webkit-transform-origin: 50% 0;
-    transform-origin: 50% 0;
-    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
-    animation: swinging 3.5s ease-in-out forwards infinite;
+.stories_date {
+    font-weight: 600;
+    font-size: 15px;
 }
 
 
 /* css for home page ends */
+
+
+/* css for the login and signup modal */
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    border: none;
+}
+
+.modal-content .subscribe_us {
+    padding: 0;
+}
+
+.modal-content .subscribe_form {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.modal-content .subscribe_form input[type='email'] {
+    width: 70%;
+}
+
+button.close {
+    padding: 5px 12px;
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    border-radius: 0;
+}
+
+
+/* css for the login and signup modal ends */
