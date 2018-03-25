@@ -915,33 +915,56 @@ form.message_contact_us .row {
     margin: 50px 0;
 }
 
-
-/* .web_technology_stories p {
-    font-size: 17px;
-    padding: 10px;
+.web_technology_stories h3 {
     color: #103f6d;
+    margin-top: 0px;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
     font-weight: 600;
+    line-height: 25px;
+}
+
+
+/* .web_technology_stories:hover h3 {
+    margin-top: -75px;
 } */
 
-.web_technology_stories:hover {
-    background: #00988a;
-    border: none;
-    color: #fff;
-    cursor: pointer;
+.centered_content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .web_technology_stories {
     height: 200px;
     margin: 30px 0px 10px 0;
     border: 2px solid #00988a;
-    display: flex;
-    justify-content: center;
     background: #fff;
     font-size: 17px;
-    padding: 20px 0;
-    color: #103f6d;
-    font-weight: 600;
+    padding: 20px 10px;
     transition: all 0.3s ease-in-out;
+    text-align: left;
+}
+
+.web_technology_stories:hover {
+    background: #00988a;
+    background: linear-gradient(to bottom, #00af9e, #00554c);
+    /* border: none; */
+    color: #fff;
+    cursor: pointer;
+}
+
+.web_technology_stories p {
+    display: none;
+    padding-top: 10px;
+}
+
+.web_technology_stories:hover p {
+    display: block;
+}
+
+.web_technology_stories:hover h3 {
+    color: #fff;
 }
 
 .stories_date {
@@ -983,6 +1006,37 @@ button.close {
     background-color: #000;
     border-color: #000;
     border-radius: 0;
+}
+
+.loginAndSignupBox span {
+    color: #000;
+    width: 50%;
+    text-align: center;
+    font-size: 17px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.loginSignup .modal-body {
+    padding: 0;
+}
+
+
+/* .loginAndSignupBox span:first-of-type {
+    color: #fff;
+} */
+
+.loginAndSignupBox span.active {
+    background: #04867a;
+    color: #fff;
+}
+
+.loginAndSignupBox {
+    height: 45px;
+    display: flex;
 }
 
 
