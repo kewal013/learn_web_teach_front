@@ -79,6 +79,11 @@ p {
     font-family: source_sans_proregular;
 }
 
+
+.padding50px {
+    padding: 50px;
+}
+
 .displayFlexAndCenter {
     display: flex;
     justify-content: center;
@@ -311,35 +316,51 @@ img {
 }
 
 
-/* .home_page {
+/* .blogs_page {
     position: relative;
 } */
 
-.home_page_image {
-    height: calc(70vh - 120px);
+.home_page_image,
+.banner_image {
+    height: 310px;
     background: #04867a;
+}
+
+.home_page_content .blogs_search {
+    width: auto !important;
+    padding: 55px;
 }
 
 .blogs_search {
     height: 184px;
     width: 80vw;
-    background-image: url(../../images/home.jpg);
-    background-size: cover;
-    background-position: -50%, -50%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
+
+.blogs_page .blogs_search {
+    background-image: url(../../images/home.jpg);
+    background-size: cover;
+    background-position: -50%, -50%;
+}
+
 .transparentColor {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.46);
     box-shadow: 1px 1px 25px 9px #4444444f;
 }
 
+.home_page_content .transparentColor {
+    background-color: rgb(0, 0, 0);
+}
+
+.blogs_page .transparentColor {
+    background-color: rgba(0, 0, 0, 0.46);
+}
 .blogs_search ::placeholder {
     color: #fff;
     opacity: 1;
@@ -379,10 +400,8 @@ img {
     margin: 0 0 0 16px;
 }
 
-.home_page_image {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
-    /* position: absolute;
-    width: 100vw; */
+.banner_image {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 0 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -515,13 +534,19 @@ span.published_date {
     padding: 20PX;
 }
 
-.subscribe_us {
+
+.why_learnwebTech,
+.subscribe_us,
+.latest_stories {
     text-align: center;
     color: #000;
     padding: 50PX;
 }
 
-.subscribe_us h3 {
+
+.why_learnwebTech h3,
+.subscribe_us h3,
+.latest_stories h3 {
     font-size: 34px;
     font-weight: 600;
 }
@@ -857,4 +882,167 @@ form.message_contact_us .row {
 }
 
 
+
 /* css for the footer ends */
+
+
+/* css for home page */
+
+.home_page_banner_text {
+    z-index: 1;
+    text-align: center;
+}
+
+.home_page_banner_text p:first-child {
+    color: #fff !important;
+    font-size: 23px !important;
+    font-weight: 500 !important;
+}
+
+.home_page_banner_text p {
+    color: #ff9e0e;
+    font-size: 30px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.learnwebtech_moto p {
+    font-size: 30px;
+}
+
+.learnwebtech_moto {
+    width: 70%;
+    margin: 35px auto;
+}
+
+.latest_stories_content.padding50px {
+    margin: 50px 0;
+}
+
+.web_technology_stories h3 {
+    color: #103f6d;
+    margin-top: 0px;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+
+/* .web_technology_stories:hover h3 {
+    margin-top: -75px;
+} */
+
+.centered_content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.web_technology_stories {
+    height: 200px;
+    margin: 30px 0px 10px 0;
+    border: 2px solid #00988a;
+    background: #fff;
+    font-size: 17px;
+    padding: 20px 10px;
+    transition: all 0.3s ease-in-out;
+    text-align: left;
+}
+
+.web_technology_stories:hover {
+    background: #00988a;
+    background: linear-gradient(to bottom, #00af9e, #00554c);
+    /* border: none; */
+    color: #fff;
+    cursor: pointer;
+}
+
+.web_technology_stories p {
+    display: none;
+    padding-top: 10px;
+}
+
+.web_technology_stories:hover p {
+    display: block;
+}
+
+.web_technology_stories:hover h3 {
+    color: #fff;
+}
+
+.stories_date {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+/* css for home page ends */
+
+
+/* css for the login and signup modal */
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    border: none;
+}
+
+.modal-content .subscribe_us {
+    padding: 0;
+}
+
+.modal-content .subscribe_form {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.modal-content .subscribe_form input[type='email'] {
+    width: 70%;
+}
+
+button.close {
+    padding: 5px 12px;
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    border-radius: 0;
+}
+
+.loginAndSignupBox span {
+    color: #000;
+    width: 50%;
+    text-align: center;
+    font-size: 17px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.loginSignup .modal-body {
+    padding: 0;
+}
+
+
+/* .loginAndSignupBox span:first-of-type {
+    color: #fff;
+} */
+
+.loginAndSignupBox span.active {
+    background: #04867a;
+    color: #fff;
+}
+
+.loginAndSignupBox {
+    height: 45px;
+    display: flex;
+}
+
+
+/* css for the login and signup modal ends */
+

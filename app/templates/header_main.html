@@ -1,10 +1,72 @@
 <!--header for the home page  -->
 
-<div class="header_home" ng-controller="navController">
+<div class="header_home">
     <div class="top_header">
-        <div class="signup_home displayFlexAndCenter">Subscribe</div>
-        <div class="right_floated_header_items">
-            <div class="main_login displayFlexAndCenter">Login</div>
+        <div class="signup_home displayFlexAndCenter" data-toggle="modal" data-target="#subscribe">Subscribe</div>
+        <!-- Modal -->
+        <div class="modal fade" id="subscribe" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- for the contact us section -->
+                        <div class="subscribe_us">
+                            <h3>Subscribe For the Weekly Updates</h3>
+                            <div class="heading_border"></div>
+
+                            <div class="subscribe_form">
+                                <form>
+                                    <input type="email" placeholder="Your Email Address goes here" />
+                                    <div class="form_submit">
+                                        <input type="submit" value="Subscribe" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- subscribe us page ends -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- modal for login sign-up ends -->
+        <div class="right_floated_header_items loginSignup">
+            <div class="main_login displayFlexAndCenter" data-toggle="modal" data-target="#myModal">Login/ Sign Up</div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="loginAndSignupBox">
+                                <span ng-class="{'active':isloginSpan}" ng-click="ActivateLogin()">Login</span>
+                                <span ng-class="{'active':issignupSpan}" ng-click="ActivateSignup()">Sign Up</span>
+                            </div>
+                            <!-- login form starts -->
+                            <form class="login formActive">
+
+                            </form>
+                            <!-- login form ends -->
+
+                            <!-- signup form starts -->
+                            <form class="signupForm">
+
+                            </form>
+                            <!-- signup form ends -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- modal for login sign-up ends -->
             <div class="main_cart">
                 <div class="my_cart displayFlexAndCenter">My Blog</div>
                 <div class="cart_number displayFlexAndCenter">0</div>
@@ -20,8 +82,15 @@
         </div>
         <div class="main_page_menu">
             <ul class="main_page_menu_list displayFlexAndCenter">
+
+
                 <li>
-                    <a href="javascript:void(0)" ng-click="gotoState('home')">Blogs</a>
+                    <a href="javascript:void(0)" ng-click="gotoState('home')">Home</a>
+                    <!-- <a ui-sref="home" ng-click="count('home')">Home</a> -->
+                </li>
+
+                <li>
+                    <a href="javascript:void(0)" ng-click="gotoState('blogs')">Blogs</a>
                     <!-- <a ui-sref="home" ng-click="count('home')">Home</a> -->
                 </li>
 
@@ -29,13 +98,11 @@
                     <a href="javascript:void(0)" ng-click="gotoState('home')">Be a Blogger</a>
                     <!-- <a ui-sref="home" ng-click="count('home')">Home</a> -->
                 </li>
-                <li>
+                <!-- <li>
                     <a href="javascript:void(0)" ng-click="gotoState('about')">Know Us</a>
-                    <!-- <a ui-sref="about">About</a> -->
-
-                </li>
+                </li> -->
                 <li>
-                    <a href="javascript:void(0)" ng-click="gotoState(contact_me)">Contact Me</a>
+                    <a href="javascript:void(0)" ng-click="gotoState('contact-us')">Contact Us</a>
                     <!-- <a ui-sref="home">Contact Me</a> -->
 
                 </li>
