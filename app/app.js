@@ -22,6 +22,7 @@ ecom.config(function($stateProvider, $urlRouterProvider) {
     .state("contact-us", {
         url: '/contact-us',
         templateUrl: 'templates/contact_us.html'
+
     })
 
     .state("blog", {

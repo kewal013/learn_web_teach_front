@@ -1,5 +1,6 @@
 ecom.controller('blogsController', [
     '$scope',
+
     '$rootScope',
     '$state',
     '$window',

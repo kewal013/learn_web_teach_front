@@ -5,5 +5,6 @@ ecom.controller('homeController', [
     '$window',
     function($scope, $rootScope, $state, $window) {
 
+
     }
 ])

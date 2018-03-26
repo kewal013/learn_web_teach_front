@@ -9,6 +9,7 @@ ecom.controller('navController', [
         $window.scrollTo(0, 0);
         $rootScope.showMainHeader = true;
         $rootScope.isHome = true;
+
         $scope.isloginSpan = true;
         $scope.issignupSpan = false;
 
@@ -25,5 +26,6 @@ ecom.controller('navController', [
             $scope.isloginSpan = false;
             $scope.issignupSpan = true;
         }
+
     }
 ])
