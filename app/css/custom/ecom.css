@@ -79,7 +79,6 @@ p {
     font-family: source_sans_proregular;
 }
 
-
 .padding50px {
     padding: 50px;
 }
@@ -340,7 +339,6 @@ img {
     position: relative;
 }
 
-
 .blogs_page .blogs_search {
     background-image: url(../../images/home.jpg);
     background-size: cover;
@@ -361,6 +359,7 @@ img {
 .blogs_page .transparentColor {
     background-color: rgba(0, 0, 0, 0.46);
 }
+
 .blogs_search ::placeholder {
     color: #fff;
     opacity: 1;
@@ -534,7 +533,6 @@ span.published_date {
     padding: 20PX;
 }
 
-
 .why_learnwebTech,
 .subscribe_us,
 .latest_stories {
@@ -542,7 +540,6 @@ span.published_date {
     color: #000;
     padding: 50PX;
 }
-
 
 .why_learnwebTech h3,
 .subscribe_us h3,
@@ -882,7 +879,6 @@ form.message_contact_us .row {
 }
 
 
-
 /* css for the footer ends */
 
 
@@ -1043,6 +1039,17 @@ button.close {
     display: flex;
 }
 
+.inputContent {
+    color: black;
+}
+
+.displayBlock {
+    display: block !important;
+}
+
+.formDeActive {
+    display: none;
+}
+
 
 /* css for the login and signup modal ends */
-
