@@ -1051,5 +1051,22 @@ button.close {
     display: none;
 }
 
+.inputDesign{
+    width: 75%;
+    border-radius: 5px;
+    height: 35px;
+    color: black;
+}
 
+.contentContainer{
+    height: 35px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.inputContainer
+{
+    text-align: center;
+}
 /* css for the login and signup modal ends */
