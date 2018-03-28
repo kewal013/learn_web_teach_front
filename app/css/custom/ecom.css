@@ -1020,9 +1020,10 @@ button.close {
     cursor: pointer;
 }
 
-.loginSignup .modal-body {
+
+/* .loginSignup .modal-body {
     padding: 0;
-}
+} */
 
 
 /* .loginAndSignupBox span:first-of-type {
@@ -1032,11 +1033,13 @@ button.close {
 .loginAndSignupBox span.active {
     background: #04867a;
     color: #fff;
+    border-radius: 4px;
 }
 
 .loginAndSignupBox {
     height: 45px;
     display: flex;
+    padding: 0px !important;
 }
 
 .inputContent {
@@ -1051,22 +1054,45 @@ button.close {
     display: none;
 }
 
-.inputDesign{
+.inputDesign {
     width: 75%;
     border-radius: 5px;
     height: 35px;
     color: black;
 }
 
-.contentContainer{
+.contentContainer {
     height: 35px;
     text-align: center;
     font-size: 18px;
     vertical-align: middle;
 }
 
-.inputContainer
-{
+.inputContainer {
     text-align: center;
 }
+
+.formField {
+    padding: 10px 0px;
+}
+
+.closeModal:hover {
+    background: #04867a;
+    color: #fff !important;
+}
+
+.closeModal {
+    color: black !important;
+}
+
+.submitModal {
+    background: #04867a;
+}
+
+.submitModal:hover {
+    background: #dddddd;
+    color: black;
+}
+
+
 /* css for the login and signup modal ends */

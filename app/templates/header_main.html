@@ -37,65 +37,67 @@
         <div class="right_floated_header_items loginSignup">
             <div class="main_login displayFlexAndCenter" data-toggle="modal" data-target="#myModal">Login/ Sign Up</div>
             <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal fade in" id="myModal" role="dialog">
                 <div class="modal-dialog">
-
                     <!-- Modal content-->
                     <div class="modal-content">
+                        <div class="modal-header loginAndSignupBox">
+                            <span ng-class="{'active':isloginSpan}" ng-click="ActivateLogin()">Login</span>
+                            <span ng-class="{'active':issignupSpan}" ng-click="ActivateSignup()">Sign Up</span>
+                        </div>
                         <div class="modal-body">
-                            <div class="loginAndSignupBox">
-                                <span ng-class="{'active':isloginSpan}" ng-click="ActivateLogin()">Login</span>
-                                <span ng-class="{'active':issignupSpan}" ng-click="ActivateSignup()">Sign Up</span>
-                            </div>
-                            <div class="modalForm">
+                            <div class="loginForm formDeActive" ng-class="{'displayBlock':isloginSpan}">
                                 <!-- login form starts -->
-                                <form class="loginForm formDeActive" ng-class="{'displayBlock':isloginSpan}">
-                                    <div class="formField">
+                                <form class="loginForm">
+                                    <div class="formField row">
                                         <div class="contentContainer col-md-3"><span class="inputContent">Email</span></div>
                                         <div class="inputContainer col-md-9"><input class="inputDesign" width="75%" type="text"></div>
                                     </div>
-                                    <div class="formField">
+                                    <div class="formField row">
                                         <div class="contentContainer col-md-3"><span class="inputContent">Password</span></div>
                                         <div class="inputContainer col-md-9"><input class="inputDesign" width="75%" type="text"></div>
                                     </div>
                                 </form>
-                                <!-- login form ends -->
+                            </div>
+                            <!-- login form ends -->
 
-                                <!-- signup form starts -->
-                                <form class="signupForm formDeActive" ng-class="{'displayBlock':issignupSpan}">
-                                    <div class="formField">
+                            <!-- signup form starts -->
+                            <div class="signupForm formDeActive" ng-class="{'displayBlock':issignupSpan}">
+                                <form class="signupForm">
+                                    <div class="formField row">
                                         <div class="contentContainer col-md-3"><span class="inputContent">Name</span></div>
                                         <div class="inputContainer col-md-9"><input class="inputDesign" width="75%" type="text"></div>
                                     </div>
-                                    <div class="formField">
+                                    <div class="formField row">
                                         <div class="contentContainer col-md-3"><span class="inputContent">Password</span></div>
                                         <div class="inputContainer col-md-9"><input class="inputDesign" width="75%" type="text"></div>
                                     </div>
-                                    <div class="formField">
+                                    <div class="formField row">
                                         <div class="contentContainer col-md-3"><span class="inputContent">Re-Password</span></div>
                                         <div class="inputContainer col-md-9"><input class="inputDesign" width="75%" type="text"></div>
                                     </div>
-                                    <div class="formField">
+                                    <div class="formField row">
                                         <div class="contentContainer col-md-3"><span class="inputContent">Email</span></div>
                                         <div class="inputContainer col-md-9"><input class="inputDesign" width="75%" type="text"></div>
                                     </div>
-                                    <div class="formField">
+                                    <div class="formField row">
                                         <div class="contentContainer col-md-3"><span class="inputContent">Organization</span></div>
                                         <div class="inputContainer col-md-9"><input class="inputDesign" width="75%" type="text"></div>
                                     </div>
-                                    <div class="formField">
+                                    <div class="formField row">
                                         <div class="contentContainer col-md-3"><span class="inputContent">Designation</span></div>
                                         <div class="inputContainer col-md-9"><input class="inputDesign" width="75%" type="text"></div>
                                     </div>
                                 </form>
-                                <!-- signup form ends -->
                             </div>
+                            <!-- signup form ends -->
+                            <!-- </div> -->
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button class="btn closeModal" data-dismiss="modal">Close</button>
+                            <button class="btn submitModal">Submit</button>
                         </div>
                     </div>
-
                 </div>
             </div>
             <!-- modal for login sign-up ends -->
