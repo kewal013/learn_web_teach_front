@@ -1,3 +1,4 @@
+'use strict'
 ecom.directive('login-page', function() {
     return {
         restrict: 'E',

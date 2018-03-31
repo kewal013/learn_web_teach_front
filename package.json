@@ -45,7 +45,8 @@
     "homepage": "https://github.com/angular/angular-phonecat#readme",
     "main": "karma.conf.js",
     "dependencies": {
-        "animate.css": "^3.5.2"
+        "animate.css": "^3.5.2",
+        "jshint": "^2.9.5"
     },
     "keywords": [
         "gulp"

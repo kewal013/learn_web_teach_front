@@ -1,3 +1,4 @@
+'use strict'
 ecom.directive('signup-page', function() {
     return {
         restrict: 'E',

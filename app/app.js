@@ -1,5 +1,6 @@
+'use strict'
 var ecom = angular.module('ecom', [
-    'ui.router',
+    'ui.router'
 ]);
 
 ecom.config(function($stateProvider, $urlRouterProvider) {
