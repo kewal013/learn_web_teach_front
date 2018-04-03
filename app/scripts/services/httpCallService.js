@@ -2,8 +2,8 @@
 ecom.service('httpCallService', [
     '$rootScope',
     '$http',
-    function ($rootScope, $http) {
-        this.loginCall = function (loginData) {
+    function($rootScope, $http) {
+        this.loginCall = function(loginData) {
             // var data = {};
             // data.body = loginData;
             // data.headers = new headers();
@@ -15,19 +15,33 @@ ecom.service('httpCallService', [
             //     console.log(err);
             //     console.log("Something went wrong");
             // })
-            $http({
-                method: 'POST',
-                url: 'http://127.0.0.1:8090/v2/components/learn_web_teach/learnWebTeach/login',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                data: JSON.stringify(loginData)
-            }).then(function (response) {
-                console.log(response);
-            });
+            // $http({
+            //     method: 'POST',
+            //     url: 'http://127.0.0.1:8090/v2/components/learn_web_teach/learnWebTeach/login',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //         'Access-Control-Allow-Origin': '*',
+            //         'Access-Control-Allow-Methods': ['OPTIONS', 'GET', 'POST'],
+            //         'Access-Control-Allow-Headers': 'Content-Type'
+            //     },
+            //     data: JSON.stringify(loginData)
+            // }).then(function(response) {
+            //     console.log(response);
+            // });
+            var apiConfig = ["http://127.0.0.1:8090/v2/components/learn_web_teach/learnWebTeach/login"];
+            var headers = {
+                "headers": {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': ['OPTIONS', 'GET', 'POST'],
+                    'Access-Control-Allow-Headers': 'Content-Type'
+                }
+            }
+            apiConfig.push(headers);
+            $http[POST].apply(null, apiConfig);
         }
 
-        this.signupCall = function (signupData) {
+        this.signupCall = function(signupData) {
             // var data = {};
             // data.body = signupData;
             // data.headers = new headers();
@@ -42,11 +56,14 @@ ecom.service('httpCallService', [
             $http({
                 method: 'POST',
                 url: 'http://127.0.0.1:8090/v2/components/learn_web_teach/learnWebTeach/signup',
-                data: signupData,
                 headers: {
-                    'Content-Type': 'application/json'
-                }
-            }).then(function (response) {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': ['OPTIONS', 'GET', 'POST'],
+                    'Access-Control-Allow-Headers': 'Content-Type'
+                },
+                data: signupData
+            }).then(function(response) {
                 console.log(response);
             });
         }

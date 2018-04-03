@@ -1,55 +1,21 @@
 {
-    "name": "gulp-testing",
+    "name": "angular-seed",
     "private": true,
-    "version": "1.0.0",
-    "description": "A tutorial application for AngularJS",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/angular/angular-phonecat.git"
-    },
+    "version": "0.0.0",
+    "description": "A starter project for AngularJS",
+    "repository": "https://github.com/angular/angular-seed",
     "license": "MIT",
     "devDependencies": {
         "bower": "^1.7.7",
-        "gulp": "^3.9.1",
-        "gulp-cssnano": "^2.1.2",
-        "gulp-if": "^2.0.2",
-        "gulp-imagemin": "^3.2.0",
-        "gulp-minify": "^1.0.0",
-        "gulp-smushit": "^1.2.0",
-        "gulp-sourcemaps": "^2.6.0",
-        "gulp-uglify": "^2.1.2",
-        "gulp-useref": "^3.1.2",
-        "http-server": "^0.9.0",
-        "imagemin-pngquant": "^5.0.0",
-        "jasmine-core": "^2.4.1",
-        "karma": "^0.13.22",
-        "karma-chrome-launcher": "^0.2.3",
-        "karma-firefox-launcher": "^0.1.7",
-        "karma-jasmine": "^0.3.8",
-        "lazypipe": "^1.0.1",
-        "protractor": "^4.0.9"
+        "http-server": "^0.9.0"
     },
     "scripts": {
-        "start": "http-server ./app",
+        "start": "http-server -a localhost -p 3004 -c-1 ./app",
         "test": "karma start karma.conf.js",
         "test-single-run": "karma start karma.conf.js --single-run",
-        "preupdate-webdriver": "npm install",
         "update-webdriver": "webdriver-manager update",
         "preprotractor": "npm run update-webdriver",
-        "protractor": "protractor e2e-tests/protractor.conf.js",
-        "update-index-async": "node -e \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/bower_components/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
+        "protractor": "protractor e2e-tests/protractor.conf.js"
     },
-    "bugs": {
-        "url": "https://github.com/angular/angular-phonecat/issues"
-    },
-    "homepage": "https://github.com/angular/angular-phonecat#readme",
-    "main": "karma.conf.js",
-    "dependencies": {
-        "animate.css": "^3.5.2",
-        "jshint": "^2.9.5"
-    },
-    "keywords": [
-        "gulp"
-    ],
-    "author": "rajneesh"
+    "dependencies": {}
 }
