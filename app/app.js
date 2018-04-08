@@ -1,10 +1,14 @@
+'use strict'
 var ecom = angular.module('ecom', [
-    'ui.router',
+    'ui.router'
 ]);
 
-ecom.config(function($stateProvider, $urlRouterProvider) {
+ecom.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($stateProvider, $urlRouterProvider, $httpProvider) {
     $urlRouterProvider.otherwise('/');
-
+    $httpProvider.defaults.headers.common = {};
+    $httpProvider.defaults.headers.post = {};
+    $httpProvider.defaults.headers.put = {};
+    $httpProvider.defaults.headers.patch = {};
     $stateProvider.
 
     state("home", {
@@ -29,4 +33,4 @@ ecom.config(function($stateProvider, $urlRouterProvider) {
         url: '/blog/:menu_url',
         templateUrl: 'templates/blog_content.html'
     })
-})
+}])

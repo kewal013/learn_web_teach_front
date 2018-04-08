@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/custom/ecom.css" />
 </head>
 
-<body ng-controller="navController" autoscroll='false'>
+<body ng-controller="navController" autoscroll='false' base-href="/">
     <!--header starts for the login page-->
     <div class="header_main" ng-include="'templates/header_main.html'" ng-if="showMainHeader"></div>
     <!--header ends- of the login page-->
@@ -137,11 +137,23 @@
 <script type="text/javascript" src="scripts/lib/bootstrap_min.js"></script>
 <!--app.js  -->
 <script type="text/javascript" src="app.js"></script>
+
+<!-- custom services -->
+<script type="text/javascript" src="scripts/services/httpCallService.js"></script>
+
 <!-- nav controller -->
 <script type="text/javascript" src="scripts/controllers/navController.js"></script>
 <!--home controller  -->
 <script type="text/javascript" src="scripts/controllers/homeController.js"></script>
 <!-- blogs controller -->
 <script type="text/javascript" src="scripts/controllers/blogsController.js"></script>
+
+
+<!-- custom directives -->
+<script type="text/javascript" src="scripts/directives/login.directive.js"></script>
+<script type="text/javascript" src="scripts/directives/signup.directive.js"></script>
+
+
+
 
 </html>

@@ -37,33 +37,23 @@
         <div class="right_floated_header_items loginSignup">
             <div class="main_login displayFlexAndCenter" data-toggle="modal" data-target="#myModal">Login/ Sign Up</div>
             <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal fade in" id="myModal" role="dialog">
                 <div class="modal-dialog">
-
                     <!-- Modal content-->
                     <div class="modal-content">
+                        <div class="modal-header loginAndSignupBox">
+                            <span ng-class="{'active':isloginSpan}" ng-click="ActivateLogin()">Login</span>
+                            <span ng-class="{'active':issignupSpan}" ng-click="ActivateSignup()">Sign Up</span>
+                        </div>
                         <div class="modal-body">
-                            <div class="loginAndSignupBox">
-                                <span ng-class="{'active':isloginSpan}" ng-click="ActivateLogin()">Login</span>
-                                <span ng-class="{'active':issignupSpan}" ng-click="ActivateSignup()">Sign Up</span>
-                            </div>
-                            <!-- login form starts -->
-                            <form class="login formActive">
-
-                            </form>
-                            <!-- login form ends -->
-
-                            <!-- signup form starts -->
-                            <form class="signupForm">
-
-                            </form>
-                            <!-- signup form ends -->
+                            <login-page ng-if="isloginSpan"></login-page>
+                            <signup-page ng-if="issignupSpan"></signup-page>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button class="btn closeModal" data-dismiss="modal">Close</button>
+                            <button class="btn submitModal">Submit</button>
                         </div>
                     </div>
-
                 </div>
             </div>
             <!-- modal for login sign-up ends -->

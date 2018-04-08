@@ -1,3 +1,4 @@
+'use strict'
 ecom.directive('footer', function() {
     return {
         restrict: 'E',
