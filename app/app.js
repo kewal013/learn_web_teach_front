@@ -3,12 +3,9 @@ var ecom = angular.module('ecom', [
     'ui.router'
 ]);
 
-ecom.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($stateProvider, $urlRouterProvider, $httpProvider) {
+ecom.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
-    $httpProvider.defaults.headers.common = {};
-    $httpProvider.defaults.headers.post = {};
-    $httpProvider.defaults.headers.put = {};
-    $httpProvider.defaults.headers.patch = {};
+
     $stateProvider.
 
     state("home", {
@@ -33,4 +30,16 @@ ecom.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($
         url: '/blog/:menu_url',
         templateUrl: 'templates/blog_content.html'
     })
-}])
+
+    .state("all_blog", {
+        url: '/all_blogs',
+        templateUrl: 'templates/view_all_blogs.html',
+        controller: 'allBlogsController'
+    })
+});
+
+ecom.run(function($rootScope) {
+    $rootScope.$on('$stateChangeSuccess', function() {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    });
+})

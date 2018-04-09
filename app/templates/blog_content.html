@@ -1,57 +1,79 @@
 <!-- to show the blog content  -->
 
 <div class="blog_page" ng-controller="blogsController">
-    <div class="blog_main_image">
-        <img src="../images/blogs_content.jpg" alt="Blogs image" />
-    </div>
-    <div class="blogs_text">
-        <div class="blogs_main_container">
-            <div class="blog_text_image">
-                <img src="../images/blog_text_image.jpg" alt="Blogs text image" />
-            </div>
-            <div class="blog_content">
-                <h2>Google Fuchsia: A new Operating System</h2>
-                <p>Fuchsia is lightweight operating system which is being developed by Google for making cross platform apps. The OS will not be based on Linux kernel and it is completely independent from android. Its kernel will be designed for only specific
-                    purpose and it is only possible by building the operating system on micro-kernel so Google has designed its own micro-kernel named xyz</p>
-                <img src="../images/blogs_text.jpg" alt="" />
-                <p>Like embedded systems, mobile applications do not need to rely on complete OS for specific tasks to perform. Fuchsia will be considered as real-time operating system because it will be having the unified features of android OS and chrome
-                    OS.
-                </p>
-                <h2>Why is it so lightweight?</h2>
-                <p>Google has already developed two operating systems, Android and Chrome OS, but both are based on Linux Kernel which follows modular monolithic approach. Linux kernel bears lots of issues like system is assembled from different component
-                    and these components work together reliably but processing becomes slow.</p>
-                <p>In <span class='boldText'>monolithic</span> type of architecture, all the basic services of operating system like management of memory, management of processes and handling the interrupts etc are packaged into a single module within the
-                    kernel space. This type of architecture leads to some serious drawbacks like huge kernel size, poor maintenance which means when there is a need to add some extra feature or fixing of bugs, the whole kernel needs to be recompiled again.</p>
-                <p>Fuchsia OS utilizes the <span class='boldText'>Magenta</span> micro-kernel to control the most basic hardware functions by inter-process communication. Micro-kernels are better than monolithic kernels in terms of performance and process
-                    management. Magenta is built for modern computers, having fast processors, reduced amount of RAM and arbitrary peripherals doing open ended communication.<span class='boldText'>[3]</span></p>
-                <h2>The first look of Fuchsia smartphones</h2>
-                <p>Fuchsia interface and apps are written with <span class='boldText'>Google's Flutter SDK</span>. Flutter is mobile SDK which is used for building iOS and android applications from a single code base. It is like Google's widget framework
-                    for apps that is written in Dart which gives better performance from those most of the android applications which are written with java. Flutter's another design target is to provide high performance app which can run ideally 120 frames
-                    per second <span class='boldText'>[2]</span>.</p><img src='../images/fuchsia_os_first_ui.png' class='centerdImages' alt='Fuchsia Operating System User Interface' />
-                <p>The User Interface of Fuchsia is called <span class='boldText'>Armadillo</span>. Armadillo interface is like series of cards on wide home screen which represent apps and fuchsia smart phones will be having only single home button which
-                    will work like window manager. Back and Recent app buttons will missing in these smart phones.<span class='boldText'>[5]</span></p>
-                <p>In the center there will be user's profile picture which can be tapped on and it will bring a menu that is like Android Quick Settings. The top row of icon shows battery percentage, network and cellular information. Below that, there will
-                    be slider consisting volume, brightness control and icons for airplane mode, do not disturb and orientation control.<span class='boldText'>[5]</span></p>
-                <p>Above the profile section, there is a bunch of cards which represents the set of apps that work together for the users to achieve a goal. Tapping on any card will load its full screen interface and the more interesting thing is split screen
-                    mode. In split screen mode, any card can be dragged into another card, can be placed anywhere on the screen horizontally as well as vertically by long pressing or user can have tab bar on top for all the applications that are dragged
-                    into one. By tapping on any tab, user can have full screen interface of particular selected application and again by clicking on home white circle button, home screen will appear with all the cards interfaces and that combined card
-                    interface. Swapping down from bottom list of suggestions card will appear and the bottom panel of screen consists Google search bar. Tapping on it will bring up a new customized keyboard which has a new dark theme similar to G-board.
-                    But it lacks lots of features like long pressing for symbols or setting do not work.<span class='boldText'>[5]</span></p>
-                <h2>Will Fuchsia Smart Phones Replace Android phones?</h2>
-                <p>Google’s Android platform has become so popular that it is difficult to imagine the future without it. However Android's Linux kernel is deteriorated with lots of issues, but it has covered all the market and people have become so used
-                    to it that they will find difficulty to adapt new OS in their smart phones.</p>
-                <p>Security is the biggest issue for all the operating systems including Linux. While Linux has good reputation than windows but from security point of view no operating system is perfect. Hundreds of devices cause fragmentation in android
-                    because these devices use twisted version of android. Google lends its OEM and carriers and permits other devices to modify accordingly. It too causes defragmentation in the android OS as the modifications cannot be promptly administered.
-                    <span class='boldText'>[4]</span>
-                </p>
-                <p>Another problem is update problem. Google releases new android updates annually and some tinkered devices don’t support updates so users with older version of android are not able to use new customized features of android updates.
-                    <span class='boldText'>[4]</span>
-                </p>
-                <p>These issues are perfectly resolved by a new OS as the resolutions provided by them are not the part of the expensive patent licenses. Fuchsia OS will be having a new updated customized widget framework. It won't need regular updates and
-                    it would be safer built and optimized for today. Google will solve all fragmentation and update problems in Fuchsia and it would gainfully work in different devices.</p>
-                <p>References :-</p>
+    <!-- fixed width banner. Will contain the heading and written by section of the blog -->
+    <div class="banner_image">
+        <!-- <img src="../images/home.jpg" alt="learnWebTech Blogs" /> -->
+        <div class="blogs_search">
+            <!-- in transparent color we will add different colors which we will decide on the random basis which we will bring it from the json and later on from the database. Currently for testing I am taking an example using the  -->
+            <div class="transparentColor colorBlack"></div>
+            <div class="home_page_banner_text">
+                <p>Internet of Things-Prelude to the Naive Technology</p>
+                <p>By - Kewal Sharma</p>
             </div>
         </div>
-        <div class="blogs_comment"></div>
+    </div>
+    <!-- fixed width banner ends -->
+
+    <div class="read_more_content">
+        <p>In the era of the explosion of technologies, there is one that has caught eyes of the most, i.e “Internet of Things”, abbreviated as IoT. To begin with a brief introduction of what IoT is and how has it changed our way of living in the past and
+            will keep influenced our lives, for all years to come.</p>
+        <h2>What is IoT?</h2>
+        <p>IoT, can be majorly understood as an ecosystem, where physical devices, implanted with sensors and connected to a Wi-Fi, can be accessed from anywhere through internet. As the name implies, “Internet of Things”, are all those “things”, which could
+            be anything, (from an automobile, loaded with sensors, or a TV/AC remote, to a person with a health monitor of any kind), that are connected over internet, thus having the capability to collect/transfer data over the network, without any human
+            intervention.
+        </p>
+        <h2>Components that comprise the IoT ecosystem:</h2>
+        <p>IoT is not just about the physical devices, that can sense or affect the environment around, accessible through an application, but also involves a middleware, the IoT platform that bridges the two. All the components must be closely bound into
+            a unit by the network using wi-fi or wireless technology, some standards, and protocols that need to be followed to provide a ubiquitous system.</p>
+        <p class='boldText'>Following are the components that are required for an IoT ecosystem to flourish:</p>
+        <ul class='list'>
+            <li><span class='boldText'>Physical Objects loaded with sensors and actuators: </span>They are the things that sense the physical environment around them to function accordingly (sensors) or affect the environment (actuators).</li>
+            <li><span class='boldText'>Virtual Objects: </span>As the name suggests, objects like the e-tickets, agendas, wallets, books etc. that lay the base for connecting the physical devices to other components.</li>
+            <li><span class='boldText'>People: </span>The people that control the environment, using sensors or actuators on those physical devices, via mobile applications.</li>
+            <li><span class='boldText'>Services: </span>Services such as cloud services, is valued for processing massive chunks of data, or big data, into valuable information, to build or to run applications that are loaded to be run by people. These are
+                also responsible for optimizing business processes, which is done by integrating the data of the devices.</li>
+            <li><span class='boldText'>IoT Platforms: </span>As mentioned above, IoT platform is the middleware that connects the IoT components, the physical objects, people, services etc to IoT. It not only provides access to the device but also ensures
+                that the installation and the behavior of the device are proper. It also analyzes the data and provides interoperable connection to the cloud, local network, and other devices.</li>
+            <li><span class='boldText'>Networks: </span>All these mentioned components cannot function as required unless tied to the network, be it wireless or wireline technology, standards and protocols to be followed for the provision of a system that
+                is pervasive.</li>
+        </ul><img src='../images/internet_of_things.png' class='centerdImages' alt='Internet of Things Ecosystem' />
+        <p style='text-align:center;font-weight:600;'>Internet of Things Ecosystem</p>
+        <p style='text-align:center;'>Image Credit: Business Insider</p>
+        <h2>IoT Application Development:</h2>
+        <p>There was a time when IoT programming languages used to be unique to embedded systems, but with time, the software has moved on to use languages that are more practical, are known and in use by web developers. To choose the language apt for the
+            development, there are a few things that are needed to be considered.</p>
+        <p>IoT comprises of embedded systems that have much limitations to consider, that are storage, low processing power and the small amount of RAM. These limitations make Linux or UNIX-like OSs like Ubuntu Core or Android, the most commonly used Operating
+            System.
+        </p>
+        <p>Similarly, to select a language for developing IoT applications, one has to opt for a language based on factors like compatibility with the IoT ecosystem, requirements like that of efficiency or speed, the size and the memory the code acquires,
+            or even the speed of development of the app. IoT programming languages serve a wide range from general purpose languages to embedded specific. Though <a href='http://www.newgeninfinite.com/insights/blog/9-things-java-developer-should-know'
+                class='internalLinkColor' ng-click='scrollToTop()'>Java covers a majority of the arena</a>, Python, C, JavaScript or other frameworks are no less catching up.</p>
+        <p>Below are the few of the languages that have occupied the market:</p>
+        <ul class='list'>
+            <li><span class='boldText'>C and C++: </span>As it goes in the past, C was born into embedded systems, by programming telephones switches, so it is certainly apt for developing IoT apps too. With its own handful of advantages and disadvantages,
+                C is still most popular with developers. Being one of the most transparent ones makes it the best choice for writing code on the lowest level of software, or even the hardware they are running on.</li>
+            <li><span class='boldText'>Java: </span>Java becomes a better choice over C, because the code is lesser hardware specific, which makes it more portable, as it claims “Write once, run everywhere”. JVM provides the facility to move the code to not
+                only smart phones or servers but even to the smallest of a chip. Java only requires a few libraries to make the base code run on any hardware.</li>
+            <li><span class='boldText'>Python: </span>What started as a scripting language, Python has become the “go-to” language for many developers. Python developers have also laid their hands on embedded control and IoT world. With devices having enough
+                memory and computational power, like the Raspberry pi processor, Python becomes the prime choice for handling applications with heavy data.</li>
+            <li><span class='boldText'>Javascript and Node.js: </span>Surprisingly, as JavaScript is finding its way to the server, it has also become a popular choice for IoT. Even, Node.js is widely being used for IoT, as it can run on both embedded systems
+                and even the server side software that’s powering the app. JavaScript is also used in the form of DeviceJS , which is a JS based development platform for programming sensors and controlling devices.</li>
+        </ul>
+        <h2>Future Plans of Developing Framework for IOT App Development:</h2>
+        <p>Through the article, we learnt that IoT domain is actually an amalgamation of domains that already existed, like that of Wireless Sensors and actuators and Pervasive Computing. However, with time, things have been evolving, and newer interaction
+            patterns are emerging, and that is leaving the developers with challenges in reusing and combining existing approaches.</p>
+        <p>This calls for a need of development of an application development framework for developing IoT applications, which might use and adapt the existing domains. This can be achieved by following quite effectively:</p>
+        <ul class='list'>
+            <li><span class='boldText'>Developing a domain specific language: </span>To develop a framework, the pre-requisite is to model the devices being used in more generalised classes, unlike those found in present frameworks and toolkits, as these
+                primarily focus on specialized (WSAN and pervasive) subclasses of such devices.</li>
+            <li><span class='boldText'>Adapting toolkits to a more General class of devices:  </span>An existing toolkit for either WSANs or Pervasive systems needs to be modified, on the basis of the model obtained above, to support both Pervasive and WSAN
+                nodes, and possibly even other classes of devices. In the event that this is not possible, a new toolkit needs to be developed.</li>
+            <li><span class='boldText'>Developing Abstractions for Incorporating Existing Internet Components into systems: </span>From the various definitions of the Internet of Things, it is clear that existing internet components, especially Web Services,
+                have a role to play in this domain. Techniques need to be developed for interacting with such existing systems, employing techniques like client generation for SOAP web service based on WSDL.</li>
+            <li><span class='boldText'>Integrating Dynamic Discovery of Devices and Services: </span>An IoT framework should allow for a system to evolve at runtime. Approaches that allow for dynamic detection of heterogeneous devices and their services need
+                to be investigated and implemented in the framework.</li>
+        </ul>
+        <p>References: <span class='boldText'>[1]</span> <a href='http://www.businessinsider.com/what-is-the-internet-of-things-definition-2016-8?IR=T' class='internalLinkColor' ng-click='scrollToTop()' rel='nofollow' target='_blank'>http://www.businessinsider.com/what-is-the-internet-of-things-definition-2016-8?IR=T</a></p>
     </div>
 </div>

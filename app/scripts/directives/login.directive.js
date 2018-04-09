@@ -1,9 +1,8 @@
-ecom.directive('login-page', function() {
+ecom.directive('loginPage', function() {
     return {
         restrict: 'E',
         // templateUrl: '../../templates/login_page.html'
-        template: "<h1>kk</h1>",
-        replace: true
+        templateUrl: "../../templates/login_page.html"
             // controller: footerController
     }
 })

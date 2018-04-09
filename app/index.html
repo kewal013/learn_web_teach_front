@@ -14,17 +14,23 @@
     <!--for css-->
     <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
     <link rel="stylesheet" href="css/custom/ecom.css" />
+
+    <link rel="stylesheet" href="css/lib/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/lib/owl.theme.default.css">
+
 </head>
 
-<body ng-controller="navController" autoscroll='false' base-href="/">
-    <!--header starts for the login page-->
-    <div class="header_main" ng-include="'templates/header_main.html'" ng-if="showMainHeader"></div>
-    <!--header ends- of the login page-->
+<body ng-controller="navController" base-href="/">
+    <div class="body_content">
+        <!--header starts for the login page-->
+        <div class="header_main" ng-include="'templates/header_main.html'" ng-if="showMainHeader"></div>
+        <!--header ends- of the login page-->
 
-    <!--content section starts-->
+        <!--content section starts-->
 
-    <div ui-view class='section_content_home'></div>
-    <div class="clearfix"></div>
+        <div ui-view class='section_content_home'></div>
+        <div class="clearfix"></div>
+    </div>
 
     <!-- footer starts -->
     <div class="common_footer">
@@ -135,6 +141,9 @@
 <script type="text/javascript" src="scripts/lib/angular-ui-router.min.js"></script>
 <!--script file of bootstrap  -->
 <script type="text/javascript" src="scripts/lib/bootstrap_min.js"></script>
+
+<script type="text/javascript" src="scripts/lib/owl.carousel.min.js"></script>
+
 <!--app.js  -->
 <script type="text/javascript" src="app.js"></script>
 
@@ -147,13 +156,11 @@
 <script type="text/javascript" src="scripts/controllers/homeController.js"></script>
 <!-- blogs controller -->
 <script type="text/javascript" src="scripts/controllers/blogsController.js"></script>
+<script type="text/javascript" src="scripts/controllers/allBlogsController.js"></script>
 
 
 <!-- custom directives -->
 <script type="text/javascript" src="scripts/directives/login.directive.js"></script>
 <script type="text/javascript" src="scripts/directives/signup.directive.js"></script>
-
-
-
 
 </html>
