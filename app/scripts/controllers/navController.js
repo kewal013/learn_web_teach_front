@@ -10,6 +10,7 @@ ecom.controller('navController', [
 
         $window.scrollTo(0, 0);
         $rootScope.showMainHeader = true;
+        $rootScope.showMainFooter = true;
         $rootScope.isHome = true;
 
         $scope.isloginSpan = true;

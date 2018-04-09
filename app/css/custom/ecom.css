@@ -953,120 +953,147 @@ form.message_contact_us .row {
 
 /* css for the login and signup modal */
 
-.modal-header,
-.modal-body,
-.modal-footer {
-    border: none;
-}
 
-.modal-content .subscribe_us {
-    padding: 0;
-}
+/* .body_content,
+.section_content_home {
+    height: 100%;
+} */
 
-.modal-content .subscribe_form {
-    margin-left: 0;
-    padding-left: 0;
-}
-
-.modal-content .subscribe_form input[type='email'] {
-    width: 70%;
-}
-
-button.close {
-    padding: 5px 12px;
-}
-
-.btn-default {
-    color: #fff;
-    background-color: #000;
-    border-color: #000;
-    border-radius: 0;
-}
-
-.loginAndSignupBox span {
-    color: #000;
-    width: 50%;
-    text-align: center;
-    font-size: 17px;
+.loginContainer {
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    cursor: pointer;
+    justify-content: center;
+    background: #f8f9f96b;
+    position: relative;
 }
 
-
-/* .loginSignup .modal-body {
-    padding: 0;
-} */
-
-
-/* .loginAndSignupBox span:first-of-type {
-    color: #fff;
-} */
-
-.loginAndSignupBox span.active {
-    background: #04867a;
-    color: #fff;
-    border-radius: 4px;
-}
-
-.loginAndSignupBox {
-    height: 45px;
-    display: flex;
-    padding: 0px !important;
-}
-
-.inputContent {
-    color: black;
-}
-
-.displayBlock {
-    display: block !important;
-}
-
-.formDeActive {
-    display: none;
+.loginForm {
+    width: 35%;
+    /* border: 1px solid gray; */
+    box-shadow: 0 0 44px 0 rgba(197, 206, 210, .58);
+    border-radius: 3px;
+    height: 250px;
+    position: relative;
+    padding: 10px;
+    background: #fff;
 }
 
 .inputDesign {
-    width: 75%;
-    border-radius: 5px;
-    height: 35px;
-    color: black;
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
 }
 
-.contentContainer {
-    height: 35px;
-    text-align: center;
-    font-size: 18px;
-    vertical-align: middle;
+.inputDesign:focus {
+    outline: 0;
+    border-bottom: 1px solid #04867a;
 }
 
-.inputContainer {
+.cancelButton {
+    background-color: #fff;
+    /* Green */
+    border: none;
+    color: #04867a;
+    padding: 7px 10px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid;
+    margin: 4px 7px;
+    -webkit-transition-duration: 0.4s;
+    border-radius: 10px;
+    float: right;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.submitButton {
+    background-color: #04867a;
+    /* Green */
+    border: none;
+    color: white;
+    float: right;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 7px;
+    -webkit-transition-duration: 0.4s;
+    border-radius: 10px;
+    border: 1px solid;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.cancelButton:hover {
+    background: #04867a;
+    color: #fff;
+}
+
+.submitButton:hover {
+    background: #fff;
+    color: #04867a;
+}
+
+.signupButton {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background: #04867a;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    cursor: pointer;
+}
+
+.signupButton i {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 14px;
+}
+
+
+/* .inputDesign:placeholder-shown+label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.5);
+} */
+
+.inputContent {
+    position: absolute;
+    top: 0;
+    padding: 7px 0 0 7px;
+    transition: all 200ms;
+    opacity: 0.5;
+}
+
+.inputDesign:focus+.inputContent,
+.inputDesign:valid+.inputContent {
+    font-size: 75%;
+    color: #04867a;
+    transform: translate3d(0, -70%, 0);
+    opacity: 1;
 }
 
 .formField {
-    padding: 10px 0px;
+    padding: 20px 0;
 }
 
-.closeModal:hover {
-    background: #04867a;
-    color: #fff !important;
-}
-
-.closeModal {
-    color: black !important;
-}
-
-.submitModal {
-    background: #04867a;
-}
-
-.submitModal:hover {
-    background: #dddddd;
-    color: black;
+.buttonContainer {
+    margin-top: 17px;
 }
 
 

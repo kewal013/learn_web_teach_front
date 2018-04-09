@@ -36,6 +36,18 @@ ecom.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: 'templates/view_all_blogs.html',
         controller: 'allBlogsController'
     })
+
+    .state("login", {
+        url: '/signin',
+        templateUrl: 'templates/login_page.html',
+        controller: 'loginController'
+    })
+
+    .state("signup", {
+        url: '/signup',
+        templateUrl: 'templates/signup_page.html',
+        controller: 'signupController'
+    })
 });
 
 ecom.run(function($rootScope) {

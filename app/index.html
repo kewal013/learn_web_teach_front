@@ -17,23 +17,24 @@
 
     <link rel="stylesheet" href="css/lib/owl.carousel.min.css">
     <link rel="stylesheet" href="css/lib/owl.theme.default.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 </head>
 
 <body ng-controller="navController" base-href="/">
-    <div class="body_content">
-        <!--header starts for the login page-->
-        <div class="header_main" ng-include="'templates/header_main.html'" ng-if="showMainHeader"></div>
-        <!--header ends- of the login page-->
+    <!-- <div class="body_content"> -->
+    <!--header starts for the login page-->
+    <div class="header_main" ng-include="'templates/header_main.html'" ng-if="showMainHeader"></div>
+    <!--header ends- of the login page-->
 
-        <!--content section starts-->
+    <!--content section starts-->
 
-        <div ui-view class='section_content_home'></div>
-        <div class="clearfix"></div>
-    </div>
+    <div ui-view class='section_content_home'></div>
+    <div class="clearfix"></div>
+    <!-- </div> -->
 
     <!-- footer starts -->
-    <div class="common_footer">
+    <div class="common_footer" ng-if="showMainFooter">
         <!-- for the contact us section -->
         <div class="subscribe_us">
             <h3>Subscribe For the Weekly Updates</h3>
@@ -157,10 +158,13 @@
 <!-- blogs controller -->
 <script type="text/javascript" src="scripts/controllers/blogsController.js"></script>
 <script type="text/javascript" src="scripts/controllers/allBlogsController.js"></script>
+<script type="text/javascript" src="scripts/controllers/loginController.js"></script>
+<script type="text/javascript" src="scripts/controllers/signupController.js"></script>
+
 
 
 <!-- custom directives -->
-<script type="text/javascript" src="scripts/directives/login.directive.js"></script>
-<script type="text/javascript" src="scripts/directives/signup.directive.js"></script>
+<!-- <script type="text/javascript" src="scripts/directives/login.directive.js"></script>
+<script type="text/javascript" src="scripts/directives/signup.directive.js"></script> -->
 
 </html>

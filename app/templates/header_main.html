@@ -35,27 +35,7 @@
         </div>
         <!-- modal for login sign-up ends -->
         <div class="right_floated_header_items loginSignup">
-            <div class="main_login displayFlexAndCenter" data-toggle="modal" data-target="#myModal">Login/ Sign Up</div>
-            <!-- Modal -->
-            <div class="modal fade in" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header loginAndSignupBox">
-                            <span ng-class="{'active':isloginSpan}" ng-click="ActivateLogin()">Login</span>
-                            <span ng-class="{'active':issignupSpan}" ng-click="ActivateSignup()">Sign Up</span>
-                        </div>
-                        <div class="modal-body">
-                            <login-page ng-if="isloginSpan"></login-page>
-                            <signup-page ng-if="issignupSpan"></signup-page>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn closeModal" data-dismiss="modal">Close</button>
-                            <button class="btn submitModal">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="main_login displayFlexAndCenter" ng-click="gotoState('login')">Login/ Sign Up</div>
             <!-- modal for login sign-up ends -->
             <div class="main_cart">
                 <div class="my_cart displayFlexAndCenter">My Blog</div>
