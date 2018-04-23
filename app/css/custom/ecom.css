@@ -468,6 +468,12 @@ img {
     font-size: 25px;
 }
 
+.circular_image img {
+    border-radius: 50%;
+    width: 170px;
+    height: auto;
+}
+
 span.published_date,
 span.blog_keyowrd {
     font-size: 13px;
@@ -953,147 +959,120 @@ form.message_contact_us .row {
 
 /* css for the login and signup modal */
 
-
-/* .body_content,
-.section_content_home {
-    height: 100%;
-} */
-
-.loginContainer {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f8f9f96b;
-    position: relative;
+.modal-header,
+.modal-body,
+.modal-footer {
+    border: none;
 }
 
-.loginForm {
-    width: 35%;
-    /* border: 1px solid gray; */
-    box-shadow: 0 0 44px 0 rgba(197, 206, 210, .58);
-    border-radius: 3px;
-    height: 250px;
-    position: relative;
-    padding: 10px;
-    background: #fff;
+.modal-content .subscribe_us {
+    padding: 0;
+}
+
+.modal-content .subscribe_form {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.modal-content .subscribe_form input[type='email'] {
+    width: 70%;
+}
+
+button.close {
+    padding: 5px 12px;
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    border-radius: 0;
+}
+
+.loginAndSignupBox span {
+    color: #000;
+    width: 50%;
+    text-align: center;
+    font-size: 17px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* .loginSignup .modal-body {
+    padding: 0;
+} */
+
+
+/* .loginAndSignupBox span:first-of-type {
+    color: #fff;
+} */
+
+.loginAndSignupBox span.active {
+    background: #04867a;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.loginAndSignupBox {
+    height: 45px;
+    display: flex;
+    padding: 0px !important;
+}
+
+.inputContent {
+    color: black;
+}
+
+.displayBlock {
+    display: block !important;
+}
+
+.formDeActive {
+    display: none;
 }
 
 .inputDesign {
-    padding: 8px;
-    display: block;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    width: 100%;
+    width: 75%;
+    border-radius: 5px;
+    height: 35px;
+    color: black;
 }
 
-.inputDesign:focus {
-    outline: 0;
-    border-bottom: 1px solid #04867a;
-}
-
-.cancelButton {
-    background-color: #fff;
-    /* Green */
-    border: none;
-    color: #04867a;
-    padding: 7px 10px;
+.contentContainer {
+    height: 35px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border: 1px solid;
-    margin: 4px 7px;
-    -webkit-transition-duration: 0.4s;
-    border-radius: 10px;
-    float: right;
-    /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
+    font-size: 18px;
+    vertical-align: middle;
 }
 
-.submitButton {
-    background-color: #04867a;
-    /* Green */
-    border: none;
-    color: white;
-    float: right;
-    padding: 7px 10px;
+.inputContainer {
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 7px;
-    -webkit-transition-duration: 0.4s;
-    border-radius: 10px;
-    border: 1px solid;
-    /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.cancelButton:hover {
-    background: #04867a;
-    color: #fff;
-}
-
-.submitButton:hover {
-    background: #fff;
-    color: #04867a;
-}
-
-.signupButton {
-    width: 50px;
-    height: 50px;
-    color: #fff;
-    background: #04867a;
-    border-radius: 50%;
-    position: absolute;
-    top: -25px;
-    right: -25px;
-    cursor: pointer;
-}
-
-.signupButton i {
-    font-size: 30px;
-    position: absolute;
-    top: 10px;
-    right: 14px;
-}
-
-
-/* .inputDesign:placeholder-shown+label {
-    cursor: text;
-    max-width: 66.66%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transform-origin: left bottom;
-    transform: translate(0, 2.125rem) scale(1.5);
-} */
-
-.inputContent {
-    position: absolute;
-    top: 0;
-    padding: 7px 0 0 7px;
-    transition: all 200ms;
-    opacity: 0.5;
-}
-
-.inputDesign:focus+.inputContent,
-.inputDesign:valid+.inputContent {
-    font-size: 75%;
-    color: #04867a;
-    transform: translate3d(0, -70%, 0);
-    opacity: 1;
 }
 
 .formField {
-    padding: 20px 0;
+    padding: 10px 0px;
 }
 
-.buttonContainer {
-    margin-top: 17px;
+.closeModal:hover {
+    background: #04867a;
+    color: #fff !important;
+}
+
+.closeModal {
+    color: black !important;
+}
+
+.submitModal {
+    background: #04867a;
+}
+
+.submitModal:hover {
+    background: #dddddd;
+    color: black;
 }
 
 
@@ -1104,6 +1083,7 @@ form.message_contact_us .row {
 
 .blog_page .transparentColor.colorBlack {
     background: #000;
+    box-shadow: none;
 }
 
 .blog_page .banner_image {
@@ -1142,7 +1122,7 @@ form.message_contact_us .row {
 }
 
 .blogs_item {
-    height: 200px;
+    height: 155px;
 }
 
 .blogs_carousel {
@@ -1167,7 +1147,7 @@ form.message_contact_us .row {
 
 .owl-carousel {
     position: relative;
-    margin-top: 35px;
+    margin-top: 24px;
 }
 
 .all_blogs_carousel {
@@ -1180,11 +1160,12 @@ form.message_contact_us .row {
 
 .owl-nav button:first-child span {
     display: inline-block;
-    font-size: 70px;
+    font-size: 50px;
     position: absolute;
     top: 40%;
     transform: translateY(-50%);
     left: -54px;
+    color: #ff9e0e;
 }
 
 .owl-nav button.disabled span {
@@ -1193,11 +1174,12 @@ form.message_contact_us .row {
 
 .owl-nav button:nth-child(2) span {
     display: inline-block;
-    font-size: 70px;
+    font-size: 50px;
     position: absolute;
     top: 40%;
     right: -52px;
     transform: translateY(-50%);
+    color: #ff9e0e;
 }
 
 .owl-carousel .owl-item img {
@@ -1205,7 +1187,7 @@ form.message_contact_us .row {
     cursor: pointer;
 }
 
-.blogs_item_heading h2 {
+.blogs_item_heading h3 {
     font-size: 17px;
     padding: 20px 10px;
     margin: 0;
@@ -1215,12 +1197,19 @@ form.message_contact_us .row {
     position: absolute;
     color: #fff;
     bottom: 0;
-    background: #04867a7a;
+    background: #00030357;
     cursor: pointer;
     min-height: 74px;
     max-height: auto;
     border-radius: 7px;
     transition: all 0.5s ease-in-out;
+}
+
+.blogs_carousel h2 {
+    font-size: 21px;
+    margin-bottom: 0;
+    font-weight: 600;
+    margin-left: 3px;
 }
 
 .owl-carousel .owl-item:hover .blogs_item_heading {
