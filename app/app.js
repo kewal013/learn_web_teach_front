@@ -28,7 +28,8 @@ ecom.config(function($stateProvider, $urlRouterProvider) {
 
     .state("blog", {
         url: '/blog/:menu_url',
-        templateUrl: 'templates/blog_content.html'
+        templateUrl: 'templates/blog_content.html',
+        controller: 'blogsController'
     })
 
     .state("all_blog", {

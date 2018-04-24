@@ -1,6 +1,6 @@
 <!-- to show the blog content  -->
 
-<div class="blog_page" ng-controller="blogsController">
+<div class="blog_page">
     <!-- fixed width banner. Will contain the heading and written by section of the blog -->
     <div class="banner_image">
         <!-- <img src="../images/home.jpg" alt="learnWebTech Blogs" /> -->
@@ -9,14 +9,14 @@
             <div class="transparentColor colorBlack"></div>
             <div class="home_page_banner_text">
                 <p>Internet of Things-Prelude to the Naive Technology</p>
-                <p>By - Kewal Sharma</p>
+                <p>By - {{results.content_published_by}}</p>
             </div>
         </div>
     </div>
     <!-- fixed width banner ends -->
 
-    <div class="read_more_content">
-        <p>In the era of the explosion of technologies, there is one that has caught eyes of the most, i.e “Internet of Things”, abbreviated as IoT. To begin with a brief introduction of what IoT is and how has it changed our way of living in the past and
+    <div class="read_more_content" ng-bind-html="results.content | to_trusted">
+        <!-- <p>In the era of the explosion of technologies, there is one that has caught eyes of the most, i.e “Internet of Things”, abbreviated as IoT. To begin with a brief introduction of what IoT is and how has it changed our way of living in the past and
             will keep influenced our lives, for all years to come.</p>
         <h2>What is IoT?</h2>
         <p>IoT, can be majorly understood as an ecosystem, where physical devices, implanted with sensors and connected to a Wi-Fi, can be accessed from anywhere through internet. As the name implies, “Internet of Things”, are all those “things”, which could
@@ -74,6 +74,6 @@
             <li><span class='boldText'>Integrating Dynamic Discovery of Devices and Services: </span>An IoT framework should allow for a system to evolve at runtime. Approaches that allow for dynamic detection of heterogeneous devices and their services need
                 to be investigated and implemented in the framework.</li>
         </ul>
-        <p>References: <span class='boldText'>[1]</span> <a href='http://www.businessinsider.com/what-is-the-internet-of-things-definition-2016-8?IR=T' class='internalLinkColor' ng-click='scrollToTop()' rel='nofollow' target='_blank'>http://www.businessinsider.com/what-is-the-internet-of-things-definition-2016-8?IR=T</a></p>
+        <p>References: <span class='boldText'>[1]</span> <a href='http://www.businessinsider.com/what-is-the-internet-of-things-definition-2016-8?IR=T' class='internalLinkColor' ng-click='scrollToTop()' rel='nofollow' target='_blank'>http://www.businessinsider.com/what-is-the-internet-of-things-definition-2016-8?IR=T</a></p> -->
     </div>
 </div>

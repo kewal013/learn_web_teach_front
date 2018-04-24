@@ -2,7 +2,9 @@
 ecom.controller('allBlogsController', [
     '$scope',
     '$timeout',
-    function($scope, $timeout) {
+    '$http',
+    function($scope, $timeout, $http) {
+        $scope.content_technologies = [];
         $(document).ready(function() {
             $(".owl-carousel").owlCarousel();
         });
@@ -34,5 +36,32 @@ ecom.controller('allBlogsController', [
             }
             e.preventDefault();
         });
+
+        $http.get("../../json/blog.json").then(function(item) {
+            $scope.blogData = item.data.main_content;
+            angular.forEach($scope.blogData, function(item, key) {
+                    if (($scope.content_technologies).indexOf(item.content_technology) == -1) {
+                        ($scope.content_technologies).push(item.content_technology);
+                    }
+                })
+                //getAllBlogs($scope.content_technologies);
+        })
+
+        // function getAllBlogs(technologies) {
+        //     angular.forEach(technologies, function(item,key){
+
+        //     })
+        // }
+
+        $scope.getRelatedBlogs = function(technology) {
+            $scope.relatedBlogsdata = [];
+            angular.forEach($scope.blogData, function(value, key) {
+                if (technology == value.content_technology) {
+                    ($scope.relatedBlogsdata).push(value);
+                }
+            })
+            console.log($scope.relatedBlogsdata);
+            return $scope.relatedBlogsdata;
+        }
     }
 ])
