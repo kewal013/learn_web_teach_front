@@ -317,7 +317,7 @@ img {
 /*css for the home page section starts  */
 
 .section_content_home {
-    height: auto;
+    height: calc(100% - 120px);
 }
 
 
@@ -973,6 +973,16 @@ form.message_contact_us .row {
     margin-left: 0;
     padding-left: 0;
 }
+.loginForm {
+    width: 475px;
+    /* border: 1px solid gray; */
+    box-shadow: 0 0 44px 0 rgba(197, 206, 210, .58);
+    border-radius: 3px;
+    height: 250px;
+    position: relative;
+    padding: 10px;
+    background: #fff;
+}
 
 .modal-content .subscribe_form input[type='email'] {
     width: 70%;
@@ -1030,6 +1040,12 @@ button.close {
 .displayBlock {
     display: block !important;
 }
+.signupButton i {
+    font-size: 30px;
+    position: absolute;
+    top: 11px;
+    right: 13px;
+}
 
 .formDeActive {
     display: none;
@@ -1075,6 +1091,25 @@ button.close {
     color: black;
 }
 
+.signupContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9f96b;
+    position: relative;
+}
+
+.signupForm{
+    width: 540px;
+    /* border: 1px solid gray; */
+    box-shadow: 0 0 44px 0 rgba(197, 206, 210, .58);
+    border-radius: 3px;
+    /* height: 250px; */
+    position: relative;
+    padding: 10px;
+    background: #fff;
+}
 
 /* css for the login and signup modal ends */
 

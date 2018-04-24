@@ -15,5 +15,8 @@ ecom.controller('loginController', [
             body.password = "kewal";
             httpCallService.loginCall(body);
         }
+        $scope.signupDisplay = function(){
+            $state.go('signup');
+        }
     }
 ])

@@ -7,7 +7,7 @@ ecom.controller('signupController', [
     'httpCallService',
 
     function ($scope, $state, $rootScope, $window, httpCallService) {
-
+        $rootScope.showMainFooter = false;
         $scope.Login = function () {
             var body = {};
             body.userName = "kewal";
