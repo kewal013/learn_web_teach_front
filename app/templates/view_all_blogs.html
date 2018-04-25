@@ -11,4 +11,215 @@
         </div>
     </div>
     <!-- banner ends -->
+
+    <!-- custom carousel -->
+    <div class="all_blogs_carousel">
+        <div class="blogs_carousel" ng-repeat="technology in content_technologies">
+            <h2>{{technology}}</h2>
+            <!-- // ng-init="technologiesRelatedBlogs = getRelatedBlogs(technology)" -->
+            <div class="owl-carousel">
+                <div class="blogs_item" ng-repeat="data in getRelatedBlogs(technology)">
+                    <img ng-src="../images/{{data.blog_image}}">
+                    <div class="blogs_item_heading">
+                        <h3>{{data.content_title}}</h3>
+                    </div>
+                </div>
+                <!-- <div class="blogs_item"> <img src="../images/AngularJs2.jpg">
+                        <div class="blogs_item_heading">
+                            <h3>Internet of things and prelude of google.</h3>
+                        </div>
+                    </div>
+                    <div class="blogs_item"> <img src="../images/AngularJs3.png">
+                        <div class="blogs_item_heading">
+                            <h3>Internet of things and prelude of google.</h3>
+                        </div>
+                    </div>
+                    <div class="blogs_item"> <img src="../images/AngularJs4.jpg">
+                        <div class="blogs_item_heading">
+                            <h3>Internet of things and prelude of google.</h3>
+                        </div>
+                    </div>
+                    <div class="blogs_item"> <img src="../images/custom-directives-in-angularjs.png">
+                        <div class="blogs_item_heading">
+                            <h3>Internet of things and prelude of google.</h3>
+                        </div>
+                    </div>
+                    <div class="blogs_item"> <img src="../images/AngularJs5.jpg">
+                        <div class="blogs_item_heading">
+                            <h3>Internet of things and prelude of google.</h3>
+                        </div>
+                    </div>
+                    <div class="blogs_item"> <img src="../images/AngularJs.png">
+                        <div class="blogs_item_heading">
+                            <h3>Internet of things and prelude of google.</h3>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+        <div class="blogs_carousel">
+            <h2>Angular JS</h2>
+            <div class="owl-carousel">
+                <div class="blogs_item">
+                    <img src="../images/AngularJs.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs2.jpg">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs3.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs4.jpg">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/custom-directives-in-angularjs.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs5.jpg">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="blogs_carousel">
+            <h2>Angular JS</h2>
+            <div class="owl-carousel">
+                <div class="blogs_item">
+                    <img src="../images/AngularJs.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs2.jpg">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs3.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs4.jpg">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/custom-directives-in-angularjs.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs5.jpg">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blogs_carousel">
+            <h2>Angular JS</h2>
+            <div class="owl-carousel">
+                <div class="blogs_item">
+                    <img src="../images/AngularJs.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs2.jpg">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs3.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs4.jpg">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/custom-directives-in-angularjs.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs5.jpg">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blogs_carousel">
+            <h2>Angular JS</h2>
+            <div class="owl-carousel">
+                <div class="blogs_item">
+                    <img src="../images/AngularJs.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs2.jpg">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs3.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs4.jpg">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/custom-directives-in-angularjs.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs5.jpg">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+                <div class="blogs_item"> <img src="../images/AngularJs.png">
+                    <div class="blogs_item_heading">
+                        <h3>Internet of things and prelude of google.</h3>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <!-- custom carousel ends -->
 </div>
