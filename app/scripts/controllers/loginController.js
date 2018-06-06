@@ -9,13 +9,14 @@ ecom.controller('loginController', [
     function($scope, $state, $rootScope, $window, httpCallService) {
         // $rootScope.showMainHeader = false;
         $rootScope.showMainFooter = false;
+        $rootScope.loginHeight = true;
         $scope.Login = function() {
             var body = {};
             body.userName = "kewal";
             body.password = "kewal";
             httpCallService.loginCall(body);
         }
-        $scope.signupDisplay = function(){
+        $scope.signupDisplay = function() {
             $state.go('signup');
         }
     }

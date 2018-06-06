@@ -6,9 +6,10 @@ ecom.controller('signupController', [
     '$window',
     'httpCallService',
 
-    function ($scope, $state, $rootScope, $window, httpCallService) {
+    function($scope, $state, $rootScope, $window, httpCallService) {
         $rootScope.showMainFooter = false;
-        $scope.Login = function () {
+        $rootScope.loginHeight = true;
+        $scope.Login = function() {
             var body = {};
             body.userName = "kewal";
             body.password = "kewal";

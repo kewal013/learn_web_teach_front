@@ -317,7 +317,7 @@ img {
 /*css for the home page section starts  */
 
 .section_content_home {
-    height: calc(100% - 120px);
+    /* height: calc(100% - 120px); */
 }
 
 
@@ -973,6 +973,7 @@ form.message_contact_us .row {
     margin-left: 0;
     padding-left: 0;
 }
+
 .loginForm {
     width: 475px;
     /* border: 1px solid gray; */
@@ -1040,11 +1041,12 @@ button.close {
 .displayBlock {
     display: block !important;
 }
+
 .signupButton i {
-    font-size: 30px;
+    font-size: 25px;
     position: absolute;
-    top: 11px;
-    right: 13px;
+    top: 15px;
+    right: 15px;
 }
 
 .formDeActive {
@@ -1052,10 +1054,11 @@ button.close {
 }
 
 .inputDesign {
-    width: 75%;
-    border-radius: 5px;
-    height: 35px;
-    color: black;
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
 }
 
 .contentContainer {
@@ -1100,7 +1103,7 @@ button.close {
     position: relative;
 }
 
-.signupForm{
+.signupForm {
     width: 540px;
     /* border: 1px solid gray; */
     box-shadow: 0 0 44px 0 rgba(197, 206, 210, .58);
@@ -1110,6 +1113,7 @@ button.close {
     padding: 10px;
     background: #fff;
 }
+
 
 /* css for the login and signup modal ends */
 
@@ -1253,3 +1257,141 @@ button.close {
 
 
 /* blog_content ends */
+
+
+/* login/signup css */
+
+.loginContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9f96b;
+    position: relative;
+}
+
+.submitButton {
+    background-color: #04867a;
+    /* Green */
+    border: none;
+    color: white;
+    float: right;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 7px;
+    -webkit-transition-duration: 0.4s;
+    border-radius: 10px;
+    border: 1px solid;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.inputDesign:focus {
+    outline: 0;
+    border-bottom: 1px solid #04867a;
+}
+
+.cancelButton {
+    background-color: #fff;
+    /* Green */
+    border: none;
+    color: #04867a;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid;
+    margin: 4px 7px;
+    -webkit-transition-duration: 0.4s;
+    border-radius: 10px;
+    float: right;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.submitButton {
+    background-color: #04867a;
+    /* Green */
+    border: none;
+    color: white;
+    float: right;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 7px;
+    -webkit-transition-duration: 0.4s;
+    border-radius: 10px;
+    border: 1px solid;
+    /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.cancelButton:hover {
+    background: #04867a;
+    color: #fff;
+}
+
+.submitButton:hover {
+    background: #fff;
+    color: #04867a;
+}
+
+.signupButton {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background: #04867a;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    cursor: pointer;
+}
+
+.signupButton i {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 14px;
+}
+
+.inputContent {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    padding: 7px 0 0 7px;
+    transition: all 200ms;
+    opacity: 0.5;
+}
+
+.inputDesign:focus+.inputContent,
+.inputDesign:valid+.inputContent {
+    font-size: 75%;
+    color: #04867a;
+    transform: translate3d(0, -70%, 0);
+    opacity: 1;
+}
+
+.formField {
+    padding: 20px 0;
+}
+
+.buttonContainer {
+    margin-top: 17px;
+}
+
+.loginHeight {
+    height: calc(100% - 120px) !important;
+}
+
+
+/* login/signup css */

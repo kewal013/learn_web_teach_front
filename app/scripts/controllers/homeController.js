@@ -5,7 +5,7 @@ ecom.controller('homeController', [
     '$state',
     '$window',
     function($scope, $rootScope, $state, $window) {
-
-
+        $rootScope.loginHeight = false;
+        $rootScope.showMainFooter = true;
     }
 ])
