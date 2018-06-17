@@ -10,6 +10,8 @@ ecom.controller('loginController', [
         // $rootScope.showMainHeader = false;
         $rootScope.showMainFooter = false;
         $rootScope.loginHeight = true;
+        $rootScope.showSignup = false;
+        $rootScope.showLogin = true;
         $scope.Login = function() {
             var body = {};
             body.userName = "kewal";

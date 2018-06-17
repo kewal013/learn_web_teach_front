@@ -1,0 +1,78 @@
+<div class="text_editor">
+    <!-- home page image with the text -->
+    <!-- <div class="banner_image">
+        <div class="blogs_search">
+            <div class="transparentColor"></div>
+            <div class="home_page_banner_text">
+                <p>Write about technology that excites you more.</b>
+                </p>
+                <p>Be a Blogger</p>
+            </div>
+        </div>
+    </div> -->
+    <!-- home page image ends -->
+    <div class="text_editor_width container-fluid">
+        <div class="row">
+            <div class="text_about_be_a_blogger" ng-show="blogDetails">
+                <h3>Love Technology?</h3>
+                <p>Come write on this site. We will try to make it reach to more number of people. Share your knowledge with others to make a platform where learning is about </p>
+                <div class="signupIfnotSignedIn">
+                    <p>Please Signup to continue</p>
+                    <div class="gotoSignup" ng-click="gotoSignupPage();">
+                        Sign up
+                    </div>
+                </div>
+            </div>
+            <div class="blog_writting col-md-4 col-xs-12" ng-class="{'showBlogDetails': blogDetails == true}">
+                <h3>Blog Details</h3>
+
+                <form class="">
+                    <div class="row">
+                        <div class="formField col-md-12">
+                            <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
+                            <div class="inputContainer col-md-12">
+                                <input class="inputDesign" name="blogDescription" width="75%" type="text" required>
+                                <label class="inputContent" for="blogDescription">Blog Url</label>
+                            </div>
+                        </div>
+                        <div class="formField col-md-12">
+                            <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
+                            <div class="inputContainer col-md-12">
+                                <input class="inputDesign" name="blogUrl" width="75%" type="textarea" required>
+                                <label class="inputContent" for="blogUrl">Blog Description</label>
+                            </div>
+                        </div>
+                        <div class="formField col-md-12">
+                            <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
+                            <div class="inputContainer col-md-12">
+                                <input class="inputDesign" name="keywords" width="75%" type="text" required>
+                                <label class="inputContent" for="keywords">keywords</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttonContainer">
+                        <div class="border_button" ng-click="submitBlogDetails();">
+                            Submit
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <text-angular name="htmlcontent" ng-model="blogContent" class="col-md-8 col-xs-12 hideTextEditor" ng-class="{ 'displayTextEditor':showTextEditor == true}">
+
+            </text-angular>
+            <!-- <div class="goBacktoBlogDetails" ng-show="showTextEditor" ng-click="showBlogDetails()">
+                GO Back
+            </div> -->
+            <div class="submit_or_preview_blog" ng-show="showTextEditor">
+                <div class="submit_blog" ng-click="submitBlog()">
+                    Submit
+                </div>
+                <div class="preview_blog" ng-click="previewBlog()">
+                    Preview
+                </div>
+            </div>
+        </div>
+
+
+    </div>

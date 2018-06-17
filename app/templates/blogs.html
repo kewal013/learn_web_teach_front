@@ -1,4 +1,4 @@
-<!--main page starts here   -->
+<!--banner starts here   -->
 <div class="blogs_page">
     <!-- home page image with the text -->
     <div class="banner_image">
@@ -6,18 +6,18 @@
         <div class="blogs_search">
             <div class="transparentColor"></div>
             <div class="search_form">
-                <input type="search" value="" name="search" placeholder="Search All Blogs Here !">
-                <button>Search</button>
+                <input type="search" value="" ng-model="search" name="search" placeholder="Search All Blogs Here !">
+                <!-- <button>Search</button> -->
             </div>
         </div>
     </div>
-    <!-- home page image ends -->
+    <!-- banner image ends -->
     <div class="blogs_section container">
         <div class="row">
             <div class="blogs_list_section col-md-8 col-xs-12">
                 <!-- <h2>Blogs</h2> -->
-                <div class="blogs_list" ng-repeat="data in blogData">
-                    <div class="blog_image col-md-3 paddingZero" ng-click="gotoState('blog', 'intenet-of-things-prelude-to-the-naive-technology')">
+                <div class="blogs_list" dir-paginate="data in blogData | filter:search | itemsPerPage:5 ">
+                    <div class="blog_image col-md-3 paddingZero" ng-click="gotoState('blog', data.content_url)">
                         <div class="circular_image">
                             <img ng-src="../images/{{data.blog_image}}" />
                         </div>
@@ -30,46 +30,43 @@
                         </div>
                         <p ng-bind-html="getContentForBlogDesc(data.content) | to_trusted"></p>
 
-                        <div class="read_more" ng-click="gotoState('blog', 'intenet-of-things-prelude-to-the-naive-technology')">
+                        <div class="read_more" ng-click="gotoState('blog', data.content_url)">
                             <span>Read More</span>
                         </div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
-
-
-                <div class="view_all_blogs read_more" ng-click="gotoState('all_blog')">
-                    <span>View All</span>
-                </div>
+                <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true" ng-click="scrollToTop()">
+                </dir-pagination-controls>
             </div>
-
             <div class="recent_blogs_and_tags col-xs-12 col-md-4">
                 <div class="recent_blogs_section">
-                    <div class="recent_blogs">
+                    <div class="tags_section_heading">
                         <h2>Technologies</h2>
+                        <span ng-click="showUnfilteredData()">Clear</span>
+                    </div>
+                    <div class="blogs_technologies">
+                        <ul>
+                            <li ng-repeat="tech in allTechnology">
+                                <span ng-bind="tech.name" ng-class="{'active': tech.activeStatus == true}" ng-click="filterDataWithTechnology(tech)"></span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="blogs_tags_section">
-                    <h2>Tags</h2>
+                    <div class="tags_section_heading">
+                        <h2>Tags</h2>
+                        <span ng-click="showUnfilteredData()">Clear</span>
+                    </div>
+
                     <div class="blogs_tags">
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
-                        <p>fsdfsdfsd</p>
+                        <p ng-repeat="tag in allTags" ng-class="{'active': tag.activeStatus == true}" ng-bind="tag.name" ng-click="filterDataWithTag(tag)"></p>
                     </div>
                 </div>
             </div>
+
         </div>
+
     </div>
     <!-- blogs_section div ends -->
     <!-- </div> -->

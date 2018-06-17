@@ -9,6 +9,8 @@ ecom.controller('signupController', [
     function($scope, $state, $rootScope, $window, httpCallService) {
         $rootScope.showMainFooter = false;
         $rootScope.loginHeight = true;
+        $rootScope.showSignup = true;
+        $rootScope.showLogin = false;
         $scope.Login = function() {
             var body = {};
             body.userName = "kewal";

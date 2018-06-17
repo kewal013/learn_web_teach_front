@@ -359,7 +359,12 @@ img {
 }
 
 .home_page_content .transparentColor {
-    background-color: rgb(0, 0, 0);
+    background-color: #000;
+}
+
+.text_editor .transparentColor {
+    background-color: rgba(0, 0, 0, 0.72);
+    width: 60%;
 }
 
 .blogs_page .transparentColor {
@@ -447,10 +452,11 @@ img {
 .recent_blogs_and_tags h2 {
     font-size: 20px;
     margin: 0;
-    margin-left: 33px;
-    margin-right: 33px;
-    border-bottom: 2px solid #f3940c;
+    /* margin-left: 33px; */
+    /* margin-right: 33px; */
+    /* border-bottom: 2px solid #f3940c; */
     padding-bottom: 12px;
+    display: inline-block;
 }
 
 .blogs_list_section {}
@@ -502,16 +508,30 @@ span.published_date {
     float: right;
 }
 
+.read_more:hover {
+    background: #ff9e0e;
+}
+
 .blogs_list {
     margin-bottom: 63px;
 }
 
 .blogs_tags p {
     display: inline-block;
-    padding: 5px;
+    padding: 5px 20px;
     background: black;
     border-radius: 4px;
     color: #fff;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.blogs_tags p.active {
+    background: #ff9e0e;
+}
+
+.blogs_tags p:hover {
+    background: #ff9e0e;
 }
 
 .blogs_tags {
@@ -553,11 +573,11 @@ span.published_date {
     padding: 50PX;
 }
 
-.why_learnwebTech h3,
-.subscribe_us h3,
-.latest_stories h3 {
+.homeHeading,
+.subscribe_us h3 {
     font-size: 34px;
     font-weight: 600;
+    text-align: center;
 }
 
 .form_submit input {
@@ -974,17 +994,6 @@ form.message_contact_us .row {
     padding-left: 0;
 }
 
-.loginForm {
-    width: 475px;
-    /* border: 1px solid gray; */
-    box-shadow: 0 0 44px 0 rgba(197, 206, 210, .58);
-    border-radius: 3px;
-    height: 250px;
-    position: relative;
-    padding: 10px;
-    background: #fff;
-}
-
 .modal-content .subscribe_form input[type='email'] {
     width: 70%;
 }
@@ -1059,6 +1068,7 @@ button.close {
     border: none;
     border-bottom: 1px solid #ccc;
     width: 100%;
+    background: #f7f7f7;
 }
 
 .contentContainer {
@@ -1094,25 +1104,25 @@ button.close {
     color: black;
 }
 
-.signupContainer {
+
+/* .signupContainer {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #f8f9f96b;
     position: relative;
-}
+} */
 
-.signupForm {
+
+/* .signupForm {
     width: 540px;
-    /* border: 1px solid gray; */
     box-shadow: 0 0 44px 0 rgba(197, 206, 210, .58);
     border-radius: 3px;
-    /* height: 250px; */
     position: relative;
     padding: 10px;
     background: #fff;
-}
+} */
 
 
 /* css for the login and signup modal ends */
@@ -1261,33 +1271,24 @@ button.close {
 
 /* login/signup css */
 
-.loginContainer {
+
+/* .loginContainer {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #f8f9f96b;
     position: relative;
-}
+} */
 
-.submitButton {
-    background-color: #04867a;
-    /* Green */
-    border: none;
-    color: white;
-    float: right;
-    padding: 7px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 7px;
-    -webkit-transition-duration: 0.4s;
-    border-radius: 10px;
-    border: 1px solid;
-    /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
+.login_and_signup_combined {
+    background-image: url(../../images/login_and_signup_page.jpg);
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .inputDesign:focus {
@@ -1315,34 +1316,9 @@ button.close {
     cursor: pointer;
 }
 
-.submitButton {
-    background-color: #04867a;
-    /* Green */
-    border: none;
-    color: white;
-    float: right;
-    padding: 7px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 7px;
-    -webkit-transition-duration: 0.4s;
-    border-radius: 10px;
-    border: 1px solid;
-    /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
 .cancelButton:hover {
     background: #04867a;
     color: #fff;
-}
-
-.submitButton:hover {
-    background: #fff;
-    color: #04867a;
 }
 
 .signupButton {
@@ -1368,7 +1344,7 @@ button.close {
     position: absolute;
     top: 0;
     left: 15px;
-    padding: 7px 0 0 7px;
+    padding: 7px 0 0 0px;
     transition: all 200ms;
     opacity: 0.5;
 }
@@ -1385,13 +1361,307 @@ button.close {
     padding: 20px 0;
 }
 
-.buttonContainer {
-    margin-top: 17px;
-}
-
 .loginHeight {
     height: calc(100% - 120px) !important;
 }
 
+.login_or_signup {
+    width: auto;
+    background: #30373C;
+    height: 275px;
+    position: relative;
+}
+
+.dont_have_account,
+.have_an_account {
+    position: absolute;
+    right: 0;
+    top: 35px;
+    color: #fff;
+    width: 464px;
+    padding: 0 20px;
+}
+
+.dont_have_account h3,
+.have_an_account h3 {
+    line-height: 31px;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.dont_have_account p,
+.have_an_account p {
+    font-size: 14px;
+}
+
+.border_button {
+    border: 1px solid #fff;
+    padding: 4px 23px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.login_signup_container {
+    width: 380px;
+    border-radius: 3px;
+    height: auto;
+    position: absolute;
+    padding: 10px 20px 15px 20px;
+    background: #F7F7F7;
+    top: -37.5px;
+    left: 52px;
+    transition: all 0.2s ease-in;
+    z-index: 10;
+}
+
+.login_or_signup h3 {
+    text-transform: uppercase;
+}
+
+.buttonContainer .border_button {
+    background: #007a80;
+    color: #fff;
+    text-align: right;
+    float: right;
+    margin-right: 21px;
+    padding: 6px 18px;
+    font-size: 12px;
+}
+
+.signupForm h3,
+.loginForm h3,
+.blog_writting h3 {
+    color: #007a80;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.pagination {
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    left: 55%;
+    transform: translateX(-50%);
+}
+
 
 /* login/signup css */
+
+.tags_section_heading {
+    border-bottom: 2px solid #f3940c;
+    width: 80%;
+    margin: auto;
+}
+
+.tags_section_heading span {
+    float: right;
+    color: #009a8b;
+    cursor: pointer;
+}
+
+.tags_section_heading span:hover {
+    text-decoration: underline;
+}
+
+.blogs_technologies ul {
+    margin-left: 22px;
+    margin-top: 23px;
+}
+
+.blogs_technologies ul li {
+    padding: 5px 0;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.blogs_technologies ul li span:hover {
+    text-decoration: underline;
+}
+
+.blogs_technologies ul li span.active {
+    color: #f3940c;
+}
+
+.text_editor_width {
+    width: 100%;
+}
+
+.ta-root.focussed>.ta-scroll-window.form-control {
+    margin: 20px 0;
+}
+
+.submit_or_preview_blog {
+    text-align: right;
+    margin: 20px 0;
+}
+
+.submit_blog,
+.preview_blog,
+.gotoSignup {
+    display: inline-block;
+    font-size: 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    background: #007a80;
+    padding: 5px 20px;
+    margin-left: 25px;
+    color: #fff;
+}
+
+.submit_blog:hover,
+.preview_blog:hover,
+.gotoSignup:hover {
+    background: #f3940c;
+}
+
+.btn-toolbar {
+    margin-left: -5px;
+    margin-bottom: 20px;
+}
+
+.text_editor .banner_image {
+    background: url(../../images/be_a_blogger.jpg);
+}
+
+
+/* .blog_writting h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #414141;
+    margin: 0 0 30px 0;
+} */
+
+
+/* label.inputBlogContent {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: right;
+    width: 34%;
+} */
+
+
+/* .blogInputForDetails {
+    margin: 30px 0;
+} */
+
+
+/* 
+input.blogInputDesign {
+    width: 60%;
+    float: right;
+} */
+
+.text_editor {
+    background-image: url(../../images/login_and_signup_page.jpg);
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blog_writting {
+    width: 380px;
+    border-radius: 3px;
+    height: auto;
+    padding: 10px 20px 15px 20px;
+    background: #F7F7F7;
+    transition: all 0.2s ease-in;
+    z-index: 10;
+    position: absolute;
+    left: 72%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+}
+
+.showBlogDetails {
+    opacity: 1;
+    z-index: 10;
+    visibility: visible;
+}
+
+.hideTextEditor {
+    position: absolute;
+    left: 50%;
+    transition: all 0.3s linear;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+}
+
+.displayTextEditor {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ta-scroll-window>.ta-bind {
+    min-height: 300px;
+    padding: 6px 12px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.text_about_be_a_blogger {
+    width: 44%;
+    color: #fff;
+    padding: 22px;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.signupIfnotSignedIn p {
+    font-size: 17px;
+    display: inline-block;
+}
+
+.signupIfnotSignedIn {
+    padding: 30px 0px;
+}
+
+.recentBlogsImages {
+    width: 82%;
+    margin-top: 35px;
+}
+
+.col-md-3.col-xs-12.paddingZero.blogContentHome {
+    min-height: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.blogDetailsHome {
+    transform: scale(0);
+    background: #00000070;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogContentHome:hover .blogDetailsHome {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.blogDetailsHome p {
+    color: #fff;
+    font-size: 17px;
+    width: 60%;
+}

@@ -1,0 +1,90 @@
+<div class="login_and_signup_combined">
+    <div class="login_or_signup">
+        <!-- login form starts -->
+        <div class="login_signup_container" id="login-signup-container">
+            <div class="loginContainer" ng-show="showLogin">
+                <div class="loginForm">
+                    <h3>Log in</h3>
+                    <!-- <div class="signupButton" ng-click="signupDisplay()">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div> -->
+                    <form class="">
+                        <div class="formField row">
+                            <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
+                            <div class="inputContainer col-md-12"><input type="email" class="inputDesign" name="userName" width="75%" type="text" required>
+                                <label class="inputContent" for="userName">Email</label></div>
+                        </div>
+                        <div class="formField row">
+                            <!-- <div class="contentContainer col-md-12"><span class="inputContent">Password</span></div> -->
+                            <div class="inputContainer col-md-12"><input class="inputDesign" name="password" width="75%" type="text" required>
+                                <label class="inputContent" for="password">Password</label></div>
+                        </div>
+                        <div class="buttonContainer">
+                            <div class="border_button">
+                                Log In
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- login form ends -->
+
+            <!-- signup form starts -->
+            <div class="signupContainer" ng-show="showSignup">
+                <div class="signupForm">
+                    <h3>Sign Up</h3>
+                    <!-- <div class="signupButton" ng-click="gotoState('login')">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </div> -->
+                    <form class="">
+                        <div class="row">
+                            <div class="formField col-md-12">
+                                <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
+                                <div class="inputContainer col-md-12">
+                                    <input class="inputDesign" name="fullName" width="75%" type="text" required>
+                                    <label class="inputContent" for="fullName">Full Name</label>
+                                </div>
+                            </div>
+                            <div class="formField col-md-12">
+                                <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
+                                <div class="inputContainer col-md-12">
+                                    <input class="inputDesign" name="email" width="75%" type="text" required>
+                                    <label class="inputContent" for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="formField col-md-12">
+                                <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
+                                <div class="inputContainer col-md-12">
+                                    <input class="inputDesign" name="password" width="75%" type="text" required>
+                                    <label class="inputContent" for="password">Password</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="buttonContainer">
+                            <div class="border_button">
+                                Sign Up
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- signup form ends -->
+        <div class="dont_have_account" ng-show="!showSignup">
+            <h3>Don't have an account?</h3>
+            <p>Sign up easily with the automated facebook or the gamil login and get start with a click</p>
+            <div class="border_button" ng-click="signupDisplay()">
+                Sign Up
+            </div>
+        </div>
+
+        <div class="have_an_account" ng-show="!showLogin">
+            <h3>Have an account?</h3>
+            <p>Sign in and express yourself in the way to. Learn and teach at the same time and grow as a individual and as a person in the society.</p>
+            <div class="border_button" ng-click="gotoState('login')">
+                Log In
+            </div>
+        </div>
+    </div>
+</div>

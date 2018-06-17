@@ -1,6 +1,8 @@
 'use strict'
 var ecom = angular.module('ecom', [
-    'ui.router'
+    'ui.router',
+    'angularUtils.directives.dirPagination',
+    'textAngular'
 ]);
 
 ecom.config(function($stateProvider, $urlRouterProvider) {
@@ -32,6 +34,12 @@ ecom.config(function($stateProvider, $urlRouterProvider) {
         controller: 'blogsController'
     })
 
+    .state("blogging", {
+        url: '/be_a_blogger',
+        templateUrl: 'templates/be_a_blogger.html',
+        controller: 'bloggingController'
+    })
+
     .state("all_blog", {
         url: '/all_blogs',
         templateUrl: 'templates/view_all_blogs.html',
@@ -40,13 +48,13 @@ ecom.config(function($stateProvider, $urlRouterProvider) {
 
     .state("login", {
         url: '/signin',
-        templateUrl: 'templates/login_page.html',
+        templateUrl: 'templates/login_and_signup_page.html',
         controller: 'loginController'
     })
 
     .state("signup", {
         url: '/signup',
-        templateUrl: 'templates/signup_page.html',
+        templateUrl: 'templates/login_and_signup_page.html',
         controller: 'signupController'
     })
 });
