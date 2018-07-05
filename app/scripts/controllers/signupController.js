@@ -11,14 +11,21 @@ ecom.controller('signupController', [
         $rootScope.loginHeight = true;
         $rootScope.showSignup = true;
         $rootScope.showLogin = false;
-        $scope.Login = function() {
-            var body = {};
-            body.userName = "kewal";
-            body.password = "kewal";
-            body.email = "kewal.sharma@newgen.co.in";
-            body.organization = "newgen";
-            body.designation = "Software Engineer";
-            httpCallService.signupCall(body);
+        $scope.signupData = {
+            userName: '',
+            email: '',
+            password: ''
+        };
+        $scope.userSignup = function() {
+            console.log($scope.signupData);
+            var body = $scope.signupData;
+            httpCallService.signupCall(body)
+                .then(function(res) {
+                    console.log(res.data.token);
+                    localStorage.setItem('token', res.data.token);
+                }, function(err) {
+                    console.log("Error in fetching data from json: " + err);
+                });
         }
     }
 ])

@@ -11,18 +11,18 @@
                     <form class="">
                         <div class="formField row">
                             <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
-                            <div class="inputContainer col-md-12"><input type="email" class="inputDesign" name="userName" width="75%" type="text" required>
+                            <div class="inputContainer col-md-12"><input type="text" class="inputDesign" name="userName" ng-model="loginData.userName" width="75%" type="text" required>
                                 <label class="inputContent" for="userName">Email</label></div>
                         </div>
                         <div class="formField row">
                             <!-- <div class="contentContainer col-md-12"><span class="inputContent">Password</span></div> -->
-                            <div class="inputContainer col-md-12"><input class="inputDesign" name="password" width="75%" type="text" required>
+                            <div class="inputContainer col-md-12"><input class="inputDesign" name="password" ng-model="loginData.password" width="75%" type="text" required>
                                 <label class="inputContent" for="password">Password</label></div>
                         </div>
                         <div class="buttonContainer">
-                            <div class="border_button">
+                            <button class="border_button" ng-click="userLogin()">
                                 Log In
-                            </div>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -41,30 +41,30 @@
                             <div class="formField col-md-12">
                                 <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
                                 <div class="inputContainer col-md-12">
-                                    <input class="inputDesign" name="fullName" width="75%" type="text" required>
+                                    <input class="inputDesign" ng-model="signupData.userName" name="fullName" width="75%" type="text" required>
                                     <label class="inputContent" for="fullName">Full Name</label>
                                 </div>
                             </div>
                             <div class="formField col-md-12">
                                 <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
                                 <div class="inputContainer col-md-12">
-                                    <input class="inputDesign" name="email" width="75%" type="text" required>
+                                    <input class="inputDesign" ng-model="signupData.email" name="email" width="75%" type="text" required>
                                     <label class="inputContent" for="email">Email</label>
                                 </div>
                             </div>
                             <div class="formField col-md-12">
                                 <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
                                 <div class="inputContainer col-md-12">
-                                    <input class="inputDesign" name="password" width="75%" type="text" required>
+                                    <input class="inputDesign" ng-model="signupData.password" name="password" width="75%" type="text" required>
                                     <label class="inputContent" for="password">Password</label>
                                 </div>
                             </div>
                         </div>
 
                         <div class="buttonContainer">
-                            <div class="border_button">
+                            <button class="border_button" ng-click="userSignup()">
                                 Sign Up
-                            </div>
+                            </button>
                         </div>
                     </form>
                 </div>

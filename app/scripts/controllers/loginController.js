@@ -12,11 +12,20 @@ ecom.controller('loginController', [
         $rootScope.loginHeight = true;
         $rootScope.showSignup = false;
         $rootScope.showLogin = true;
-        $scope.Login = function() {
-            var body = {};
-            body.userName = "kewal";
-            body.password = "kewal";
-            httpCallService.loginCall(body);
+        $scope.loginData = {
+            userName: '',
+            password: ''
+        }
+        $scope.userLogin = function() {
+            console.log($scope.loginData);
+            var body = $scope.loginData;
+            httpCallService.loginCall(body)
+                .then(function(res) {
+                    console.log(res.data.token);
+                    localStorage.setItem('token', res.data.token);
+                }, function(err) {
+                    console.log("Error in fetching data from json: " + err);
+                });
         }
         $scope.signupDisplay = function() {
             $state.go('signup');

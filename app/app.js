@@ -5,7 +5,15 @@ var ecom = angular.module('ecom', [
     'textAngular'
 ]);
 
-ecom.config(function($stateProvider, $urlRouterProvider) {
+ecom.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+
+    $httpProvider.defaults.useXDomain = true;
+    $httpProvider.defaults.headers.common = {};
+    $httpProvider.defaults.headers.post = {};
+    $httpProvider.defaults.headers.put = {};
+    $httpProvider.defaults.headers.patch = {};
+
+
     $urlRouterProvider.otherwise('/');
 
     $stateProvider.
