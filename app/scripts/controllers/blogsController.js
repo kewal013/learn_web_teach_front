@@ -6,7 +6,8 @@ ecom.controller('blogsController', [
     '$state',
     '$window',
     '$stateParams',
-    function($scope, $http, $rootScope, $state, $window, $stateParams) {
+    'httpCallService',
+    function($scope, $http, $rootScope, $state, $window, $stateParams, httpCallService) {
         //var menu_url = $stateParams.menu_url;
         // to show the content of the blog
         //getData();
@@ -29,39 +30,44 @@ ecom.controller('blogsController', [
             $window.scrollTo(0, 0);
         }
 
-        $http.get("../../json/blog.json").then(function(item) {
-            //allBlogsData = item.data;
-            $scope.blogData = item.data.main_content;
-            $scope.blogDataBackup = $scope.blogData;
-            if ($stateParams.menu_url != null || $stateParams.menu_url != undefined)
-                getData($stateParams.menu_url);
-            angular.forEach($scope.blogData, function(value, key) {
-                var tagsInaSingleBlog = value.content_tag;
-                var technologiesInSingleBlog = value.content_technology;
-                var technologyArrayInSingleBlog = technologiesInSingleBlog.split(",");
-                var tagsArrayForSingleBlog = tagsInaSingleBlog.split(",");
-                angular.forEach(tagsArrayForSingleBlog, function(item, i) {
-                    if (($scope.allTags).indexOf(item) == -1) {
-                        var obj = {};
-                        obj.name = item;
-                        obj.activeStatus = false;
-                        $scope.allTags.push(obj);
-                    }
-                });
-                angular.forEach(technologyArrayInSingleBlog, function(val, pos) {
-                    if (($scope.allTechnology).indexOf(val) == -1) {
-                        var obj1 = {};
-                        obj1.name = val;
-                        obj1.activeStatus = false;
-                        $scope.allTechnology.push(obj1);
-                    }
-                });
+        // $http.get("../../json/blog.json")
+        $scope.getData = function() {
+            httpCallService.getAllBlogs()
+                .then(function(item) {
+                    //allBlogsData = item.data;
+                    $scope.blogData = item.data;
+                    $scope.blogDataBackup = $scope.blogData;
+                    if ($stateParams.menu_url != null || $stateParams.menu_url != undefined)
+                        getData($stateParams.menu_url);
+                    angular.forEach($scope.blogData, function(value, key) {
+                        var tagsInaSingleBlog = value.content_tag;
+                        var technologiesInSingleBlog = value.content_technology;
+                        var technologyArrayInSingleBlog = technologiesInSingleBlog.split(",");
+                        var tagsArrayForSingleBlog = tagsInaSingleBlog.split(",");
+                        angular.forEach(tagsArrayForSingleBlog, function(item, i) {
+                            if (($scope.allTags).indexOf(item) == -1) {
+                                var obj = {};
+                                obj.name = item;
+                                obj.activeStatus = false;
+                                $scope.allTags.push(obj);
+                            }
+                        });
+                        angular.forEach(technologyArrayInSingleBlog, function(val, pos) {
+                            if (($scope.allTechnology).indexOf(val) == -1) {
+                                var obj1 = {};
+                                obj1.name = val;
+                                obj1.activeStatus = false;
+                                $scope.allTechnology.push(obj1);
+                            }
+                        });
 
 
-            });
-            $scope.allTechnology = removeDuplicates($scope.allTechnology, 'name');
-            $scope.allTags = removeDuplicates($scope.allTags, 'name');
-        });
+                    });
+                    $scope.allTechnology = removeDuplicates($scope.allTechnology, 'name');
+                    $scope.allTags = removeDuplicates($scope.allTags, 'name');
+                });
+        }
+        $scope.getData();
 
         function removeDuplicates(myArr, prop) {
             return myArr.filter((obj, pos, arr) => {

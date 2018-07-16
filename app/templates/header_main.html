@@ -35,11 +35,12 @@
         </div>
         <!-- modal for login sign-up ends -->
         <div class="right_floated_header_items loginSignup">
-            <div class="main_login displayFlexAndCenter" ng-click="gotoState('login')">Login/ Sign Up</div>
+            <div class="main_login displayFlexAndCenter" ng-if="!userExist" ng-click="gotoState('login')">Login/ Sign Up</div>
+            <div class="main_login displayFlexAndCenter" ng-if="userExist" ng-click="logout()">Logout</div>
             <!-- modal for login sign-up ends -->
             <div class="main_cart">
-                <div class="my_cart displayFlexAndCenter">My Blog</div>
-                <div class="cart_number displayFlexAndCenter">0</div>
+                <div class="my_cart displayFlexAndCenter" ng-disabled="!userExist">My Blog</div>
+                <div class="cart_number displayFlexAndCenter">{{userBlogsCount}}</div>
             </div>
         </div>
     </div>

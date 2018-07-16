@@ -23,6 +23,8 @@ ecom.controller('loginController', [
                 .then(function(res) {
                     console.log(res.data.token);
                     localStorage.setItem('token', res.data.token);
+                    localStorage.setItem('user', res.data.user);
+                    $state.go('home');
                 }, function(err) {
                     console.log("Error in fetching data from json: " + err);
                 });
