@@ -2,9 +2,13 @@
 ecom.service('httpCallService', [
     '$rootScope',
     '$http',
-    function($rootScope, $http) {
+    'apiUrl',
+    function($rootScope, $http, apiUrl) {
+        var uri = apiUrl;
+        console.log(uri);
+        var baseUrl = "/v2/components/learnWebTeach";
         this.loginCall = function(loginData) {
-            var url = "http://127.0.0.1:8090/v2/components/learnWebTeach/login";
+            var url = uri + baseUrl + "/login";
             var apiConfig = [url];
             var headers = {};
             headers['Content-Type'] = 'application/json';
@@ -16,7 +20,7 @@ ecom.service('httpCallService', [
         }
 
         this.signupCall = function(signupData) {
-            var url = "http://127.0.0.1:8090/v2/components/learnWebTeach/signup";
+            var url = uri + baseUrl + "/signup";
             var apiConfig = [url];
             var headers = {};
             headers['Content-Type'] = 'application/json';
@@ -28,12 +32,9 @@ ecom.service('httpCallService', [
         }
 
         this.getAllBlogs = function() {
-            var url = "http://127.0.0.1:8090/v2/components/learnWebTeach/getAllBlogs";
+            var url = uri + baseUrl + "/getAllBlogs";
             var apiConfig = [url];
             var headers = {};
-            // headers['Content-Type'] = 'application/json';
-            // headers['Accept'] = 'application/json';
-            // apiConfig.push(signupData);
             apiConfig.push({ 'headers': headers });
 
             return $http["get"].apply(null, apiConfig);
@@ -41,12 +42,9 @@ ecom.service('httpCallService', [
 
         this.getUserBlogs = function() {
             var username = localStorage.getItem('user');
-            var url = "http://127.0.0.1:8090/v2/components/learnWebTeach/user/" + username + "/getBlogs";
+            var url = uri + baseUrl + "/user/" + username + "/getBlogs";
             var apiConfig = [url];
             var headers = {};
-            // headers['Content-Type'] = 'application/json';
-            // headers['Accept'] = 'application/json';
-            // apiConfig.push(signupData);
             apiConfig.push({ 'headers': headers });
 
             return $http["get"].apply(null, apiConfig);
