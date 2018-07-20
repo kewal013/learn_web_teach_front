@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300">
     <link rel="stylesheet" href="http://textangular.com/dist/textAngular.css" type="text/css">
 
+    <link href="css/lib/toaster.css" rel="stylesheet" />
+
+
 </head>
 
 <body ng-controller="navController" base-href="/">
@@ -132,6 +135,7 @@
             </div>
         </div>
     </div>
+    <toaster-container toaster-options="{'time-out': 1000}" class="customClass"></toaster-container>
     <!-- contact us seciton ends -->
     <!--content section ends-->
 </body>
@@ -155,7 +159,6 @@
 <script src='http://textangular.com/dist/textAngular.min.js'></script>
 <!--app.js  -->
 <script type="text/javascript" src="app.js"></script>
-
 <!-- custom services -->
 <script type="text/javascript" src="scripts/services/httpCallService.js"></script>
 
@@ -171,6 +174,8 @@
 <script type="text/javascript" src="scripts/controllers/be_a_blogger.js"></script>
 <script type="text/javascript" src="scripts/filters/trustFilter.js"></script>
 <script type="text/javascript" src="scripts/constants/app.constant.js"></script>
+<!-- <script src="http://code.angularjs.org/1.4.2/angular-animate.min.js"></script> -->
+<script src="scripts/lib/toaster.js"></script>
 
 
 

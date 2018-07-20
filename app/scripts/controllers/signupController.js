@@ -17,14 +17,18 @@ ecom.controller('signupController', [
             password: ''
         };
         $scope.userSignup = function() {
-            console.log($scope.signupData);
+            // console.log($scope.signupData);
             var body = $scope.signupData;
             httpCallService.signupCall(body)
                 .then(function(res) {
                     console.log(res.data.token);
                     localStorage.setItem('token', res.data.token);
                     localStorage.setItem('user', res.data.user);
-                    $state.go('home');
+                    if ($state.params.preBlog === 'blogging') {
+                        $state.go('blogging');
+                    } else {
+                        $state.go('home');
+                    }
                 }, function(err) {
                     console.log("Error in fetching data from json: " + err);
                 });

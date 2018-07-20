@@ -2,7 +2,8 @@
 var ecom = angular.module('ecom', [
     'ui.router',
     'angularUtils.directives.dirPagination',
-    'textAngular'
+    'textAngular',
+    'toaster'
 ]);
 
 ecom.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
@@ -57,13 +58,19 @@ ecom.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
     .state("login", {
         url: '/signin',
         templateUrl: 'templates/login_and_signup_page.html',
-        controller: 'loginController'
+        controller: 'loginController',
+        params: {
+            preBlog: null
+        }
     })
 
     .state("signup", {
         url: '/signup',
         templateUrl: 'templates/login_and_signup_page.html',
-        controller: 'signupController'
+        controller: 'signupController',
+        params: {
+            preBlog: null
+        }
     })
 });
 

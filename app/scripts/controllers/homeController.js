@@ -11,15 +11,6 @@ ecom.controller('homeController', [
         $rootScope.userExist = false;
         $rootScope.userName = '';
         $rootScope.userBlogsCount = 0;
-        $scope.getUser = function() {
-            var username = localStorage.getItem('user');
-            console.log(username);
-            if (username) {
-                $rootScope.userExist = true;
-                $rootScope.userName = username;
-            }
-        }
-        $scope.getUser();
 
         $scope.getUserBlogs = function() {
             httpCallService.getUserBlogs()
@@ -27,17 +18,30 @@ ecom.controller('homeController', [
                     $rootScope.userBlogsCount = blogs.data.length;
                 })
         }
-        $scope.getUserBlogs();
+
+        $scope.getUser = function() {
+            var username = localStorage.getItem('user');
+            console.log(username);
+            if (username) {
+                $rootScope.userExist = true;
+                $rootScope.userName = username;
+                $scope.getUserBlogs();
+            }
+        }
+        $scope.getUser();
 
 
         $scope.gotoState = function(state, menuUrl) {
             $state.go(state, { menu_url: menuUrl });
 
         }
+
         $rootScope.logout = function() {
             localStorage.clear();
-            $state.go('home');
             $state.reload();
+            if ($state.current.name === 'blogging') {
+                $state.go('home');
+            }
         }
 
     }

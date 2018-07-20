@@ -45,9 +45,25 @@ ecom.service('httpCallService', [
             var url = uri + baseUrl + "/user/" + username + "/getBlogs";
             var apiConfig = [url];
             var headers = {};
+            headers['Authorization'] = localStorage.getItem("token");
             apiConfig.push({ 'headers': headers });
 
             return $http["get"].apply(null, apiConfig);
+        }
+
+        this.saveBlog = function(blogData, ) {
+            var uri = apiUrl;
+            console.log(uri);
+            var baseUrl = "/v2/components/learnWebTeach";
+            var url = uri + baseUrl + "/blog";
+            var apiConfig = [url];
+            var headers = {};
+            headers['Content-Type'] = 'application/json';
+            headers['Accept'] = 'application/json';
+            headers['Authorization'] = localStorage.getItem("token");
+            apiConfig.push(blogData);
+            apiConfig.push({ 'headers': headers });
+            return $http["post"].apply(null, apiConfig);
         }
     }
 ]);

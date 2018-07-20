@@ -16,12 +16,12 @@
             <div class="text_about_be_a_blogger" ng-show="blogDetails">
                 <h3>Love Technology?</h3>
                 <p>Come write on this site. We will try to make it reach to more number of people. Share your knowledge with others to make a platform where learning is about </p>
-                <div class="signupIfnotSignedIn">
+                <!-- <div class="signupIfnotSignedIn">
                     <p>Please Signup to continue</p>
                     <div class="gotoSignup" ng-click="gotoSignupPage();">
                         Sign up
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="blog_writting col-md-4 col-xs-12" ng-class="{'showBlogDetails': blogDetails == true}">
                 <h3>Blog Details</h3>
@@ -31,21 +31,21 @@
                         <div class="formField col-md-12">
                             <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
                             <div class="inputContainer col-md-12">
-                                <input class="inputDesign" name="blogDescription" width="75%" type="text" required>
-                                <label class="inputContent" for="blogDescription">Blog Url</label>
+                                <input class="inputDesign" ng-model="blogData.content_url" name="blogUrl" width="75%" type="text" required>
+                                <label class="inputContent" for="blogUrl">Blog Url</label>
                             </div>
                         </div>
                         <div class="formField col-md-12">
                             <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
                             <div class="inputContainer col-md-12">
-                                <input class="inputDesign" name="blogUrl" width="75%" type="textarea" required>
-                                <label class="inputContent" for="blogUrl">Blog Description</label>
+                                <input class="inputDesign" ng-model="blogData.content_title" name="blogDescription" width="75%" type="textarea" required>
+                                <label class="inputContent" for="blogDescription">Blog Description</label>
                             </div>
                         </div>
                         <div class="formField col-md-12">
                             <!-- <div class="contentContainer col-md-12"><span class="inputContent">Email</span></div> -->
                             <div class="inputContainer col-md-12">
-                                <input class="inputDesign" name="keywords" width="75%" type="text" required>
+                                <input class="inputDesign" ng-model="blogData.content_tag" name="keywords" width="75%" type="text" required>
                                 <label class="inputContent" for="keywords">keywords</label>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                     </div>
                 </form>
             </div>
-            <text-angular name="htmlcontent" ng-model="blogContent" class="col-md-8 col-xs-12 hideTextEditor" ng-class="{ 'displayTextEditor':showTextEditor == true}">
+            <text-angular name="htmlcontent" ng-model="blogData.content" class="col-md-8 col-xs-12 hideTextEditor" ng-class="{ 'displayTextEditor':showTextEditor == true}">
 
             </text-angular>
             <!-- <div class="goBacktoBlogDetails" ng-show="showTextEditor" ng-click="showBlogDetails()">
@@ -68,11 +68,34 @@
                 <div class="submit_blog" ng-click="submitBlog()">
                     Submit
                 </div>
-                <div class="preview_blog" ng-click="previewBlog()">
+                <div class="preview_blog" ng-click="previewBlog()" focus-index="1" class="btn btn-primary" data-toggle="modal" focus-element="autofocus" data-target=".bs-example-modal-lg">
                     Preview
                 </div>
             </div>
         </div>
 
 
+    </div>
+
+    <div class="modal-bg">
+        <div class="dialog">
+            <div class="modal fade bs-example-modal-lg" focus-group focus-group-head="loop" focus-group-tail="loop" focus-stacktabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Blog Preview</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal_blog_title">{{blogData.content_title}}</div>
+                            <div ng-bind-html="blogData.content"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" focus-element="autofocus" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>

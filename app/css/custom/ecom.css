@@ -982,7 +982,7 @@ form.message_contact_us .row {
 .modal-header,
 .modal-body,
 .modal-footer {
-    border: none;
+    /* border: none; */
 }
 
 .modal-content .subscribe_us {
@@ -1664,4 +1664,29 @@ input.blogInputDesign {
     color: #fff;
     font-size: 17px;
     width: 60%;
+}
+
+.customClass {
+    width: 100%;
+    top: 0 !important;
+    right: 0 !important;
+    background: #d25252;
+    text-align: center;
+}
+
+.toast-error {
+    width: 100% !important;
+}
+
+.modal_blog_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    border: 1 !important;
 }
